@@ -13,7 +13,473 @@
       --orange: #f26a21;
       --dark: #333333;
       --light: #f6f6f6;
+      --white: #ffffff;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Exquisite System Industry Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Sample reference projects by Exquisite System Industry Company in aluminum works, glass façades, blinds, roller shades and shutter systems across Saudi Arabia." />
+
+  <style>
+    :root {
+      --blue: #1f4e79;
+      --orange: #f26a21;
+      --dark: #333333;
+      --light: #f6f6f6;
       --white: #ffffff;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* Top bar */
+    .top-bar {
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* Header / nav */
+    header {
+      background: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+    }
+    .logo-img img {
+      width: 92%;
+      height: 92%;
+      object-fit: contain;
+    }
+    .logo-text-english-main {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+    .logo-text-arabic {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    nav a {
+      position: relative;
+      padding-bottom: 0.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.25s ease;
+    }
+    nav a:hover {
+      opacity: 1;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .nav-link.active {
+      opacity: 1;
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+    }
+    .lang-switch a {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .lang-switch .active {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    /* Page layout */
+    main { padding: 2.5rem 1rem 2.5rem; }
+    .page-inner { max-width: var(--max-width); margin: 0 auto; }
+
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.6rem;
+      max-width: 750px;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .section-block {
+      margin-bottom: 2.2rem;
+    }
+    .section-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .section-text {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .projects-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1rem;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      font-size: 0.9rem;
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--blue);
+      background: rgba(31,78,121,0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      margin-bottom: 0.4rem;
+    }
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--dark);
+    }
+    .project-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.4rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 1.4rem;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.9rem 1rem;
+      font-size: 0.8rem;
+      margin-top: 2rem;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Aluminum works · Curtains · Roller blinds · Shutter systems</div>
+      <div>
+        Email:
+        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
+        Website:
+        <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <div class="logo-area">
+        <div class="logo-img">
+          <img src="images/exquisite-logo.svg" alt="Exquisite System Industry Logo">
+        </div>
+        <div>
+          <div class="logo-text-english-main">Exquisite System Industry Co.</div>
+          <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <a href="projects.html" class="active">EN</a>
+        <a href="projects-ar.html">AR</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-inner">
+
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">
+        Sample project types that Exquisite System Industry Company can deliver in aluminum,
+        glass façades, interior shading and shutter systems across Saudi Arabia. Later you can
+        replace these examples with real project names, photos and detailed information.
+      </p>
+
+      <!-- Section 1: Commercial & Office Projects -->
+      <section class="section-block">
+        <h2 class="section-heading">Commercial & Office Projects</h2>
+        <p class="section-text">
+          Aluminum windows and doors, glass façades and interior shading solutions for offices,
+          business towers and shopping centers.
+        </p>
+
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">Office Tower</span>
+            <div class="project-title">Office Building – Riyadh</div>
+            <div class="project-meta">Scope: Glass façade and aluminum windows.</div>
+            <p>
+              Supply and installation of curtain wall systems and aluminum sliding / hinged
+              windows for a mid-rise office building, including shop drawings, fabrication
+              and site installation according to project specifications.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Retail Center</span>
+            <div class="project-title">Showrooms & Shops – Jeddah</div>
+            <div class="project-meta">Scope: Shopfronts and display glazing.</div>
+            <p>
+              Aluminum and glass shopfronts for multiple retail units in a shopping center,
+              with automatic entrance doors and glass selected to balance display visibility
+              and solar control.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Office Fit-out</span>
+            <div class="project-title">Service Company Offices – Dammam</div>
+            <div class="project-meta">Scope: Interior roller blinds.</div>
+            <p>
+              Supply and installation of blackout and sunscreen roller blinds for meeting
+              rooms and open offices, using manual and motorized operation according to
+              usage of each area.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 2: Residential & Hospitality Projects -->
+      <section class="section-block">
+        <h2 class="section-heading">Residential & Hospitality Projects</h2>
+        <p class="section-text">
+          Complete packages for villas, compounds and hotels: aluminum windows and doors,
+          interior curtains and roller blinds, and exterior shutters where required.
+        </p>
+
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">Villa Compound</span>
+            <div class="project-title">Private Residential Compound – Riyadh</div>
+            <div class="project-meta">Scope: Aluminum windows/doors and shutters.</div>
+            <p>
+              Full aluminum door and window package for villas, combined with selected exterior
+              shutters on key openings to enhance privacy, light control and security.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Serviced Apartments</span>
+            <div class="project-title">Serviced Apartment Building – Jeddah</div>
+            <div class="project-meta">Scope: Roller blinds and fabric curtains.</div>
+            <p>
+              Supply and installation of roller blinds and layered fabric curtains for living
+              rooms and bedrooms, ensuring an elegant appearance and adjustable light levels
+              for guests.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Business Hotel</span>
+            <div class="project-title">City Hotel – Dammam</div>
+            <div class="project-meta">Scope: Aluminum façades and windows.</div>
+            <p>
+              Aluminum and glass façades for guest rooms and common areas, designed to meet
+              acoustic and thermal requirements for a hotel located on main city roads.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 3: Industrial & Service Projects -->
+      <section class="section-block">
+        <h2 class="section-heading">Industrial & Service Projects</h2>
+        <p class="section-text">
+          Heavy-duty shutter systems, special aluminum doors and shading for loading bays,
+          warehouses and service facilities.
+        </p>
+
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">Industrial Facility</span>
+            <div class="project-title">Warehouses & Loading Bays – Dammam</div>
+            <div class="project-meta">Scope: Heavy-duty industrial shutters.</div>
+            <p>
+              Installation of robust metal shutters for warehouse doors and loading bay
+              openings, including motors, safety sensors and control systems tailored
+              to truck and equipment movement.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Logistics Center</span>
+            <div class="project-title">Logistics Service Hub – Riyadh</div>
+            <div class="project-meta">Scope: Special aluminum doors and shading.</div>
+            <p>
+              Custom aluminum doors for operation offices and control rooms, combined with
+              shading solutions on front windows to reduce glare and improve working comfort
+              for staff.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">Showroom & Service</span>
+            <div class="project-title">Equipment Showroom – Jeddah</div>
+            <div class="project-meta">Scope: Display façades and protective shutters.</div>
+            <p>
+              Aluminum and glass façades for a showroom with front protective shutters for
+              each display opening, balancing attractive presentation during business hours
+              with security after closing.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <p class="note">
+        When real reference projects are available, you can replace these samples with actual
+        project names, client/consultant details and site photos, and link to Google Maps
+        locations after obtaining the necessary approvals.
+      </p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Exquisite System Industry Company – All rights reserved.</div>
+      <div>Designed to match the official company letterhead identity.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
       --max-width: 1100px;
       --radius: 10px;
     }
