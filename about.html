@@ -1,1 +1,345 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Exquisite System Industry Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="About Exquisite System Industry Company – aluminum work, curtains, roller blinds and shutter systems in Saudi Arabia." />
+
+  <style>
+    :root {
+      --blue: #1f4e79;
+      --orange: #f26a21;
+      --dark: #333333;
+      --light: #f6f6f6;
+      --white: #ffffff;
+      --max-width: 1100px;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .top-bar { background: var(--orange); color: var(--white); font-size: 0.9rem; }
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    header { background: var(--blue); color: var(--white); }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo-area { display: flex; align-items: center; gap: 0.6rem; }
+    .logo-img {
+      width: 50px; height: 50px; border-radius: 50%;
+      background: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .logo-img img { width: 100%; height: 100%; object-fit: contain; }
+    .logo-text-english { font-weight: 700; font-size: 1rem; line-height: 1.2; }
+    .logo-text-arabic { font-size: 0.8rem; opacity: 0.9; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+    nav a { position: relative; padding-bottom: 0.2rem; }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0;
+      width: 0; height: 2px;
+      background: var(--orange);
+      transition: width 0.25s ease;
+    }
+    nav a:hover::after { width: 100%; }
+
+    .lang-switch {
+      display: flex; gap: 0.4rem; font-size: 0.85rem;
+    }
+    .lang-switch a {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    .lang-switch .active {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 45%, #e9f0f7 100%);
+      border-bottom: 3px solid var(--orange);
+    }
+    .page-hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.2rem 1rem 1.6rem;
+    }
+    .page-hero-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+    .page-hero-subtitle {
+      font-size: 0.98rem;
+      color: #555;
+      max-width: 700px;
+    }
+
+    section { padding: 2.2rem 1rem; }
+    .section-inner { max-width: var(--max-width); margin: 0 auto; }
+    .section-title {
+      font-size: 1.3rem; font-weight: 700;
+      margin-bottom: 0.8rem; color: var(--blue);
+      position: relative; display: inline-block;
+    }
+    .section-title::after {
+      content: ""; position: absolute; left: 0; bottom: -0.2rem;
+      width: 60%; height: 3px; background: var(--orange); border-radius: 999px;
+    }
+    .section-subtitle {
+      font-size: 0.95rem; color: #666;
+      margin-bottom: 1.4rem; max-width: 650px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 1.5rem; align-items: start;
+    }
+    .about-card {
+      background: var(--light);
+      padding: 1.3rem;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--blue);
+      font-size: 0.95rem;
+    }
+    .about-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--blue);
+    }
+
+    .about-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .fact-item {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 0.9rem;
+      border: 1px solid #e1e1e1;
+    }
+    .fact-number {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 0.1rem;
+    }
+
+    .timeline {
+      margin-top: 1.6rem;
+      border-left: 3px solid var(--orange);
+      padding-left: 1rem;
+      font-size: 0.9rem;
+    }
+    .timeline-item { margin-bottom: 0.8rem; }
+    .timeline-year {
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.1rem;
+    }
+
+    footer {
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.9rem 1rem;
+      font-size: 0.8rem;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      nav ul { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>Aluminum Work · Curtains · Roller Blinds · Shutter Systems</div>
+      <div>
+        Email: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
+        Website: <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav">
+      <div class="logo-area">
+        <div class="logo-img">
+          <img src="images/exquisite-logo.png" alt="Exquisite System Industry Logo">
+        </div>
+        <div>
+          <div class="logo-text-english">Exquisite System Industry Co.</div>
+          <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switch">
+        <a href="about.html" class="active">EN</a>
+        <a href="about-ar.html">AR</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-hero-title">About Exquisite System Industry Company</h1>
+      <p class="page-hero-subtitle">
+        A Saudi industrial company specialized in aluminum works, curtains, roller blinds and shutter systems,
+        serving residential, commercial and industrial projects across the Kingdom.
+      </p>
+    </div>
+  </div>
+
+  <!-- Company profile -->
+  <section>
+    <div class="section-inner">
+      <h2 class="section-title">Company Profile</h2>
+      <p class="section-subtitle">
+        شركة الأنظمة المتقنة للصناعة تقدّم حلولاً متكاملة في مجال الألمنيوم وأنظمة التظليل والستائر،
+        بدءاً من الدراسة الهندسية وحتى التصنيع والتركيب وخدمة ما بعد البيع.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Who we are</h3>
+          <p>
+            Exquisite System Industry Company operates with a clear commitment to quality, reliability and
+            on-time delivery. We combine technical expertise with practical field experience to support
+            contractors, consultants and building owners in achieving their project goals.
+          </p>
+          <p style="margin-top:0.6rem;">
+            From our branches in Riyadh, Jeddah and Dammam, we manage projects of different sizes – villas,
+            residential buildings, commercial centers, offices, hotels and industrial facilities.
+          </p>
+        </div>
+
+        <div>
+          <div class="about-facts">
+            <div class="fact-item">
+              <div class="fact-number">Mission</div>
+              <div>To deliver high-quality aluminum and shading solutions that meet project specifications and
+                add long-term value to our clients’ assets.</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-number">Vision</div>
+              <div>To be a trusted partner for aluminum, roller blinds and shutter systems in the Saudi market.</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-number">Values</div>
+              <div>Integrity, professionalism, safety, commitment, continuous improvement and customer focus.</div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-number">Team</div>
+              <div>Engineers, technicians and installers with hands-on experience in local and regional projects.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">Experience</div>
+          <div>
+            Our team brings years of experience in aluminum profiles, façade systems, interior shading and
+            shutter technologies, ensuring solutions that are both aesthetic and functional.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Quality & Compliance</div>
+          <div>
+            We follow project specifications and relevant standards, select reliable materials and apply
+            workmanship procedures that enhance durability and performance.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Partnership Approach</div>
+          <div>
+            We work as partners with consultants and contractors – providing technical proposals, samples,
+            shop drawings and on-site coordination to keep the project on schedule.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> Exquisite System Industry Company – All rights reserved.</div>
+      <div>Designed to match official company letterhead identity.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
