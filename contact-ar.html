@@ -5,11 +5,9 @@
   <title>التواصل والفروع | شركة الأنظمة المتقنة للصناعة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="التواصل مع شركة الأنظمة المتقنة للصناعة – بيانات فروع الرياض وجدة والدمام ونموذج طلب عرض سعر أو استفسار." />
+        content="بيانات التواصل مع شركة الأنظمة المتقنة للصناعة، عناوين الفروع في الرياض وجدة والدمام، ونموذج طلب عرض سعر أو استفسار للأعمال في مجال الألمنيوم والستائر والشتر." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://kasemsaied.github.io/exquisite-system/contact-ar.html" />
 
   <style>
     :root {
@@ -22,18 +20,31 @@
       --radius: 10px;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
       background: #fafafa;
       color: var(--dark);
       line-height: 1.7;
+      text-align: right;
     }
 
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* الشريط العلوي */
     .top-bar {
       background: var(--orange);
       color: var(--white);
@@ -51,6 +62,13 @@
       gap: 0.5rem;
     }
 
+    .top-bar-inner div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    /* الهيدر والقائمة */
     header {
       background: var(--blue);
       color: var(--white);
@@ -74,6 +92,7 @@
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      flex-direction: row-reverse;
     }
 
     .logo-img {
@@ -94,15 +113,15 @@
       object-fit: contain;
     }
 
-    .logo-text-arabic-main {
+    .logo-text-english-main {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.9rem;
       line-height: 1.2;
     }
 
-    .logo-text-english {
-      font-size: 0.8rem;
-      opacity: 0.9;
+    .logo-text-arabic {
+      font-size: 0.85rem;
+      opacity: 0.95;
     }
 
     nav ul {
@@ -111,6 +130,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
+      flex-direction: row-reverse;
     }
 
     nav a {
@@ -132,16 +152,27 @@
       transition: width 0.25s ease;
     }
 
-    nav a:hover { opacity: 1; }
-    nav a:hover::after { width: 100%; }
+    nav a:hover {
+      opacity: 1;
+    }
 
-    .nav-link.active { opacity: 1; }
-    .nav-link.active::after { width: 100%; }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      opacity: 1;
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+    }
 
     .lang-switch {
       display: flex;
       gap: 0.4rem;
       font-size: 0.85rem;
+      flex-direction: row-reverse;
     }
 
     .lang-switch a {
@@ -155,7 +186,10 @@
       border-color: var(--orange);
     }
 
-    main { padding: 2.5rem 1rem 2.5rem; }
+    /* تخطيط الصفحة */
+    main {
+      padding: 2.5rem 1rem 2.5rem;
+    }
 
     .page-inner {
       max-width: var(--max-width);
@@ -173,65 +207,107 @@
       font-size: 0.95rem;
       color: #666;
       margin-bottom: 1.6rem;
-      max-width: 650px;
+      max-width: 780px;
     }
 
-    .contact-grid {
+    /* أقسام عامة */
+    .section-block {
+      margin-bottom: 2.4rem;
+    }
+
+    .section-heading {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-heading::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -0.2rem;
+      width: 45%;
+      height: 3px;
+      background: var(--orange);
+      border-radius: 999px;
+    }
+
+    .section-lead {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.1rem;
+      max-width: 760px;
+    }
+
+    /* شبكة 2 عمود */
+    .two-col-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
       gap: 1.5rem;
       align-items: flex-start;
-    }
-
-    .contact-details { font-size: 0.9rem; }
-    .contact-details p { margin-bottom: 0.3rem; }
-
-    .branches {
       margin-top: 0.8rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 0.8rem;
-      font-size: 0.85rem;
     }
 
-    .branch-card {
-      background: var(--white);
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 1px dashed #e0c9b0;
-    }
-
-    .branch-name {
-      font-weight: 600;
-      color: var(--blue);
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-form {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 1rem;
-      border: 1px solid #f0ded0;
+    /* صندوق بيانات الاتصال */
+    .contact-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.2rem 1.3rem;
+      border: 1px solid #e4e4e4;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
       font-size: 0.9rem;
     }
 
-    .form-row { margin-bottom: 0.6rem; }
+    .contact-box p {
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    .contact-channels {
+      margin-top: 0.6rem;
+    }
+
+    .contact-channels a {
+      color: var(--blue);
+    }
+
+    /* نموذج الاتصال */
+    .contact-form {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.2rem 1.3rem;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      font-size: 0.9rem;
+    }
+
+    .form-row {
+      margin-bottom: 0.7rem;
+    }
 
     .form-row label {
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       margin-bottom: 0.2rem;
-      color: #666;
+      color: #555;
     }
 
     .form-row input,
-    .form-row textarea {
+    .form-row textarea,
+    .form-row select {
       width: 100%;
       padding: 0.45rem 0.6rem;
       border-radius: 6px;
       border: 1px solid #d4d4d4;
       font: inherit;
+      background: #fdfdfd;
     }
 
     .form-row textarea {
@@ -239,6 +315,66 @@
       resize: vertical;
     }
 
+    .form-hint {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+
+    /* بطاقات الفروع */
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .branch-card {
+      background: #ffffff;
+      border-radius: 14px;
+      border: 1px solid #e4e4e4;
+      padding: 1rem 1.05rem;
+      font-size: 0.88rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    }
+
+    .branch-title {
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+
+    .branch-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.3rem;
+    }
+
+    .branch-card p {
+      margin-bottom: 0.25rem;
+    }
+
+    .branch-map-note {
+      font-size: 0.78rem;
+      color: #999;
+      margin-top: 0.3rem;
+    }
+
+    /* صندوق ملاحظة */
+    .highlight-box {
+      background: #fdf3eb;
+      border-radius: 14px;
+      border: 1px solid #f3d2b5;
+      padding: 1rem 1.1rem;
+      font-size: 0.85rem;
+      margin-top: 1.3rem;
+    }
+
+    .highlight-box strong {
+      color: var(--blue);
+    }
+
+    /* أزرار */
     .btn-primary {
       background: var(--orange);
       color: var(--white);
@@ -251,37 +387,174 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      transition: background 0.2s ease, transform 0.15s ease,
-        box-shadow 0.15s ease;
-      box-shadow: 0 8px 18px rgba(242, 106, 33, 0.3);
     }
 
-    .btn-primary:hover {
-      background: #e25f1c;
+    .btn-secondary {
+      background: transparent;
+      color: var(--blue);
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid var(--blue);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(242, 106, 33, 0.35);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
     }
 
+    /* شريط دعوة بسيط أسفل النموذج */
+    .cta-band {
+      background: linear-gradient(135deg, #fdf3eb 0%, #ffe4d1 45%, #f9f1ea 100%);
+      border-top: 1px solid #f3d2b5;
+      border-bottom: 1px solid #f3d2b5;
+      padding: 1.6rem 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .cta-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cta-text-main {
+      max-width: 620px;
+    }
+
+    .cta-title {
+      font-size: 1.2rem;
+      color: var(--blue);
+      margin-bottom: 0.3rem;
+    }
+
+    .cta-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    /* الفوتر */
     footer {
       background: var(--orange);
-      color: var(--white);
-      padding: 0.9rem 1rem;
-      font-size: 0.8rem;
-      margin-top: 2rem;
+      color: #ffffff;
+      padding: 1.6rem 1rem 1.2rem;
+      font-size: 0.85rem;
+      margin-top: 2.2rem;
     }
 
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: space-between;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 2.1fr 1.2fr 1.4fr;
+      gap: 1.3rem;
     }
 
-    @media (max-width: 860px) {
-      .contact-grid { grid-template-columns: 1fr; }
+    .footer-col h3,
+    .footer-col h4 {
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .footer-col p {
+      margin-bottom: 0.3rem;
+    }
+
+    .footer-meta {
+      opacity: 0.9;
+      font-size: 0.8rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-col a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0.8rem auto 0;
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    /* زر واتساب */
+    .whatsapp-float {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.7rem;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    /* تجاوب */
+    @media (max-width: 900px) {
+      .two-col-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
@@ -294,32 +567,43 @@
         justify-content: flex-start;
         flex-wrap: wrap;
       }
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- الشريط العلوي -->
   <div class="top-bar">
     <div class="top-bar-inner">
-      <div>أعمال الألمنيوم · الستائر · الرول · الشتر</div>
       <div>
-        البريد الإلكتروني:
+        <span>أعمال الألمنيوم</span> ·
+        <span>الواجهات الزجاجية</span> ·
+        <span>الستائر والرول</span> ·
+        <span>أنظمة الشتر</span>
+      </div>
+      <div>
+        <span>البريد:</span>
         <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
-        الموقع:
+        <span>الموقع:</span>
         <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
       </div>
     </div>
   </div>
 
+  <!-- الهيدر -->
   <header>
     <div class="nav">
       <div class="logo-area">
         <div class="logo-img">
-          <img src="images/exquisite-logo.svg" alt="شعار شركة الأنظمة المتقنة للصناعة">
+          <img src="images/exquisite-logo.svg" alt="Exquisite System Industry Logo">
         </div>
         <div>
-          <div class="logo-text-arabic-main">شركة الأنظمة المتقنة للصناعة</div>
-          <div class="logo-text-english">Exquisite System Industry Co.</div>
+          <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
+          <div class="logo-text-english-main">Exquisite System Industry Co.</div>
         </div>
       </div>
 
@@ -327,9 +611,9 @@
         <ul>
           <li><a href="index-ar.html" class="nav-link">الرئيسية</a></li>
           <li><a href="about-ar.html" class="nav-link">عن الشركة</a></li>
-          <li><a href="products-ar.html" class="nav-link">المنتجات</a></li>
+          <li><a href="products-ar.html" class="nav-link">المنتجات والحلول</a></li>
           <li><a href="projects-ar.html" class="nav-link">المشاريع</a></li>
-          <li><a href="contact-ar.html" class="nav-link active">التواصل</a></li>
+          <li><a href="contact-ar.html" class="nav-link active">التواصل والفروع</a></li>
         </ul>
       </nav>
 
@@ -342,87 +626,217 @@
 
   <main>
     <div class="page-inner">
-      <h1 class="page-title">التواصل والفروع</h1>
+      <h1 class="page-title">التواصل مع شركة الأنظمة المتقنة للصناعة</h1>
       <p class="page-subtitle">
-        للاستفسارات أو طلب عروض الأسعار أو التنسيق لزيارة موقع المشروع، يمكنكم التواصل
-        معنا عبر بيانات الفروع أو من خلال نموذج التواصل.
+        يمكن التواصل معنا لطلب عرض سعر، أو الاستفسار عن إمكانية خدمة مشروعك في مدينة معيّنة، أو طلب
+        ملف تعريفي ومراجع للمشاريع. سيتم توجيه الطلب إلى الجهة المناسبة داخل الشركة حسب نوع المشروع.
       </p>
 
-      <div class="contact-grid">
-        <section class="contact-details">
-          <p><strong>شركة الأنظمة المتقنة للصناعة</strong></p>
-          <p>Exquisite System Industry Co.</p>
-          <p style="margin-top:0.4rem;">
-            السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
-          </p>
-          <p style="margin-top:0.4rem;">
-            البريد الإلكتروني:
-            <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a><br>
-            الموقع:
-            <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
-          </p>
+      <!-- 1) بيانات الاتصال + نموذج -->
+      <section class="section-block">
+        <h2 class="section-heading">بيانات الاتصال المباشر</h2>
+        <p class="section-lead">
+          يفضّل عند إرسال بريد أو تعبئة النموذج ذكر المدينة، ونوع المشروع (سكني، تجاري، صناعي)،
+          ونطاق الأعمال المتوقع (ألمنيوم، ستائر، شتر، أو حزمة متكاملة).
+        </p>
 
-          <div class="branches">
-            <div class="branch-card">
-              <div class="branch-name">فرع الرياض</div>
-              <div>الفرع الرئيسي – الرياض</div>
-              <div>(يضاف العنوان بالتفصيل)</div>
-              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
+        <div class="two-col-grid">
+          <!-- صندوق بيانات الاتصال -->
+          <div class="contact-box">
+            <p><span class="contact-label">اسم الشركة:</span> شركة الأنظمة المتقنة للصناعة</p>
+            <p><span class="contact-label">الاسم بالإنجليزية:</span> Exquisite System Industry Co.</p>
+
+            <div class="contact-channels">
+              <p>
+                <span class="contact-label">البريد الإلكتروني:</span>
+                <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a>
+              </p>
+              <p>
+                <span class="contact-label">الموقع الإلكتروني:</span>
+                <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
+              </p>
+              <p>
+                <span class="contact-label">المدن الرئيسية:</span>
+                الرياض · جدة · الدمام
+              </p>
             </div>
-            <div class="branch-card">
-              <div class="branch-name">فرع جدة</div>
-              <div>(يضاف العنوان)</div>
-              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
-            </div>
-            <div class="branch-card">
-              <div class="branch-name">فرع الدمام</div>
-              <div>(يضاف العنوان)</div>
-              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
-            </div>
+
+            <p style="margin-top:0.6rem;">
+              <span class="contact-label">الغرض من التواصل:</span>
+              <br />
+              - طلب عرض سعر لأعمال الألمنيوم أو الستائر أو الشتر.<br />
+              - الاستفسار عن إمكانية خدمة مشروع في مدينة معيّنة.<br />
+              - طلب ملف تعريفي ومراجع للمشاريع لمتطلبات التأهيل أو التسجيل.
+            </p>
           </div>
 
-          <p style="font-size:0.85rem; color:#777; margin-top:1rem;">
-            يمكن إضافة أرقام واتساب لكل فرع وروابط خرائط جوجل لتسهيل الوصول لمواقع
-            الفروع على العملاء.
-          </p>
-        </section>
+          <!-- نموذج الاتصال (غير فعّال برمجياً لكن شكلياً احترافي) -->
+          <form class="contact-form">
+            <div class="form-row">
+              <label for="name">الاسم</label>
+              <input id="name" type="text" placeholder="اكتب اسمك الثلاثي">
+            </div>
+            <div class="form-row">
+              <label for="company">الجهة / الشركة</label>
+              <input id="company" type="text" placeholder="اسم الشركة أو الجهة (إن وجد)">
+            </div>
+            <div class="form-row">
+              <label for="city">المدينة</label>
+              <input id="city" type="text" placeholder="مثال: الرياض، جدة، الدمام">
+            </div>
+            <div class="form-row">
+              <label for="email">البريد الإلكتروني</label>
+              <input id="email" type="email" placeholder="name@example.com">
+              <div class="form-hint">سيتم استخدام البريد للرد على استفسارك أو تزويدك بالعرض.</div>
+            </div>
+            <div class="form-row">
+              <label for="phone">رقم الجوال / الهاتف</label>
+              <input id="phone" type="text" placeholder="+9665xxxxxxxx">
+            </div>
+            <div class="form-row">
+              <label for="service">نوع الطلب</label>
+              <select id="service">
+                <option>طلب عرض سعر (ألمنيوم)</option>
+                <option>طلب عرض سعر (ستائر رول / ستائر داخلية)</option>
+                <option>طلب عرض سعر (شتر)</option>
+                <option>حزمة متكاملة (ألمنيوم + ستائر + شتر)</option>
+                <option>استفسار عام / طلب ملف تعريفي</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">تفاصيل المشروع أو الاستفسار</label>
+              <textarea id="message"
+                placeholder="رجاءً اذكر نوع المبنى (فيلا، مبنى مكاتب، مستودع...)، وحجم العمل التقريبي إن أمكن."></textarea>
+            </div>
+            <button type="submit" class="btn-primary">إرسال الطلب (نموذج شكلي)</button>
+            <div class="form-hint">
+              * هذا النموذج للعرض فقط. للإرسال الفعلي يمكنك النسخ والإرسال على البريد:
+              <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a>
+            </div>
+          </form>
+        </div>
+      </section>
 
-        <form class="contact-form">
-          <div class="form-row">
-            <label for="name">الاسم</label>
-            <input id="name" type="text" placeholder="اكتب اسمك هنا">
-          </div>
-          <div class="form-row">
-            <label for="company">الجهة / المشروع</label>
-            <input id="company" type="text" placeholder="اسم الشركة أو المشروع">
-          </div>
-          <div class="form-row">
-            <label for="email">البريد الإلكتروني</label>
-            <input id="email" type="email" placeholder="name@example.com">
-          </div>
-          <div class="form-row">
-            <label for="phone">رقم الجوال / الهاتف</label>
-            <input id="phone" type="text" placeholder="+966...">
-          </div>
-          <div class="form-row">
-            <label for="message">الرسالة</label>
-            <textarea id="message" placeholder="صف طلبك أو تفاصيل المشروع."></textarea>
-          </div>
-          <button type="submit" class="btn-primary">إرسال الرسالة</button>
-        </form>
-      </div>
+      <!-- 2) الفروع الرئيسية -->
+      <section class="section-block">
+        <h2 class="section-heading">الفروع والمدن التي نخدمها</h2>
+        <p class="section-lead">
+          تعمل الشركة من خلال فروع في الرياض وجدة والدمام، مع إمكانية دراسة مشاريع في مدن أخرى
+          حسب طبيعة المشروع ونطاقه.
+        </p>
+
+        <div class="branches-grid">
+          <article class="branch-card">
+            <div class="branch-title">فرع الرياض – المقر الرئيسي</div>
+            <div class="branch-meta">المنطقة الوسطى</div>
+            <p><strong>المدينة:</strong> الرياض</p>
+            <p><strong>النطاق:</strong> مشاريع سكنية وتجارية وخدمية</p>
+            <p><strong>مناسب لـ:</strong> فلل منفصلة، مجمعات سكنية، مباني مكاتب، معارض تجارية</p>
+            <p class="branch-map-note">
+              * يمكن إضافة موقع الفرع على خرائط جوجل لاحقاً عند توفر التفاصيل.
+            </p>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-title">فرع جدة</div>
+            <div class="branch-meta">منطقة مكة المكرمة</div>
+            <p><strong>المدينة:</strong> جدة</p>
+            <p><strong>النطاق:</strong> مشاريع سكنية وتجارية على الساحل الغربي</p>
+            <p><strong>مناسب لـ:</strong> فلل، شقق، مباني مكاتب، واجهات تجارية</p>
+            <p class="branch-map-note">
+              * يتم تنسيق زيارة الموقع أو المعاينة حسب مواعيد يتم الاتفاق عليها مسبقاً.
+            </p>
+          </article>
+
+          <article class="branch-card">
+            <div class="branch-title">فرع الدمام</div>
+            <div class="branch-meta">المنطقة الشرقية</div>
+            <p><strong>المدينة:</strong> الدمام (مع خدمة الظهران والخبر وما حولها)</p>
+            <p><strong>النطاق:</strong> مشاريع سكنية وصناعية ومستودعات</p>
+            <p><strong>مناسب لـ:</strong> مستودعات، مرافق صناعية، فلل ومجمعات سكنية</p>
+            <p class="branch-map-note">
+              * يفضّل إرسال بيانات المشروع قبل تحديد موعد زيارة الموقع.
+            </p>
+          </article>
+        </div>
+
+        <div class="highlight-box">
+          <strong>ملاحظة:</strong>
+          يمكن دراسة مشاريع خارج المدن المذكورة (مثل القصيم، الطائف، أو مناطق أخرى) بناءً على حجم
+          المشروع وطبيعة النطاق المطلوب في الألمنيوم أو التظليل أو الشتر.
+        </div>
+      </section>
     </div>
   </main>
 
+  <!-- شريط دعوة -->
+  <section class="cta-band">
+    <div class="cta-inner">
+      <div class="cta-text-main">
+        <h2 class="cta-title">هل لديك مشروع ترغب في مناقشته مبدئياً؟</h2>
+        <p class="cta-text">
+          يمكن البدء برسالة مختصرة عبر البريد أو الواتساب مع ذكر المدينة ونوع المبنى ونطاق الأعمال المتوقع.
+          سيتم الرد عليك لتحديد الخطوة التالية المناسبة (زيارة موقع، طلب مخططات، أو إعداد عرض مبدئي).
+        </p>
+      </div>
+      <div class="cta-buttons">
+        <a href="mailto:perfectsystemeo@gmail.com" class="btn-primary">إرسال رسالة عبر البريد</a>
+        <a href="https://wa.me/966553075340" target="_blank" class="btn-secondary">التواصل عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفوتر -->
   <footer>
     <div class="footer-inner">
-      <div>© <span id="year"></span> شركة الأنظمة المتقنة للصناعة – جميع الحقوق محفوظة.</div>
-      <div>تصميم متوافق مع هوية ترويسة الشركة الرسمية.</div>
+      <div class="footer-col">
+        <h3>شركة الأنظمة المتقنة للصناعة</h3>
+        <p>
+          حلول ألمنيوم وتظليل وشتر للمباني السكنية والتجارية والصناعية في المملكة العربية السعودية.
+        </p>
+        <p class="footer-meta">
+          السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="index-ar.html">الرئيسية</a></li>
+          <li><a href="about-ar.html">عن الشركة</a></li>
+          <li><a href="products-ar.html">المنتجات والحلول</a></li>
+          <li><a href="projects-ar.html">المشاريع</a></li>
+          <li><a href="contact-ar.html">التواصل والفروع</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>بيانات التواصل</h4>
+        <p>البريد: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a></p>
+        <p>الرياض · جدة · الدمام</p>
+        <p class="footer-meta">أيام العمل: الأحد – الخميس، 9:00 ص – 5:00 م</p>
+        <p class="footer-meta">
+          ملفات: <a href="files/ESI-Contact-Info-AR.pdf">ملخص بيانات الاتصال (PDF)</a>
+        </p>
+      </div>
     </div>
+
+    <div class="footer-bottom">
+      <div>© <span id="year"></span> شركة الأنظمة المتقنة للصناعة – جميع الحقوق محفوظة.</div>
+     
   </footer>
 
+  <!-- السنة + واتساب -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <a
+    href="https://wa.me/966553075340?text=مرحباً%20شركة%20الأنظمة%20المتقنة%20للصناعة%2C%20لدي%20استفسار%20بخصوص%20مشروع%20أو%20عرض%20سعر."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="الدردشة عبر واتساب"
+  >✆</a>
+
 </body>
 </html>
