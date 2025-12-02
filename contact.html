@@ -5,7 +5,11 @@
   <title>Contact | Exquisite System Industry Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Contact Exquisite System Industry Company in Riyadh, Jeddah and Dammam for aluminum, roller blinds and shutter systems." />
+        content="Contact Exquisite System Industry Company branches in Riyadh, Jeddah and Dammam for aluminum and shading solutions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -21,8 +25,8 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--white);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
       color: var(--dark);
       line-height: 1.6;
     }
@@ -35,6 +39,7 @@
       color: var(--white);
       font-size: 0.9rem;
     }
+
     .top-bar-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -46,7 +51,15 @@
       gap: 0.5rem;
     }
 
-    header { background: var(--blue); color: var(--white); }
+    header {
+      background: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -56,24 +69,19 @@
       justify-content: space-between;
       gap: 1rem;
     }
+
     .logo-area { display: flex; align-items: center; gap: 0.6rem; }
 
     .logo-img {
-      width: 68px;
-      height: 68px;
+      width: 60px; height: 60px;
       border-radius: 50%;
       background: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       overflow: hidden;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
     }
-    .logo-img img {
-      width: 90%;
-      height: 90%;
-      object-fit: contain;
-    }
+
+    .logo-img img { width: 92%; height: 92%; object-fit: contain; }
 
     .logo-text-english { font-weight: 700; font-size: 1rem; line-height: 1.2; }
     .logo-text-arabic { font-size: 0.8rem; opacity: 0.9; }
@@ -85,10 +93,15 @@
       flex-wrap: wrap;
       font-size: 0.95rem;
     }
+
     nav a {
       position: relative;
       padding-bottom: 0.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
     }
+
     nav a::after {
       content: "";
       position: absolute;
@@ -99,69 +112,48 @@
       background: var(--orange);
       transition: width 0.25s ease;
     }
+
+    nav a:hover { opacity: 1; }
     nav a:hover::after { width: 100%; }
+
+    .nav-link.active { opacity: 1; }
+    .nav-link.active::after { width: 100%; }
 
     .lang-switch {
       display: flex;
       gap: 0.4rem;
       font-size: 0.85rem;
     }
+
     .lang-switch a {
       padding: 0.15rem 0.5rem;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.5);
     }
+
     .lang-switch .active {
       background: var(--orange);
       border-color: var(--orange);
     }
 
-    .page-hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 45%, #e9f0f7 100%);
-      border-bottom: 3px solid var(--orange);
-    }
-    .page-hero-inner {
+    main { padding: 2.5rem 1rem 2.5rem; }
+
+    .page-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1rem 1.6rem;
     }
-    .page-hero-title {
+
+    .page-title {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--blue);
       margin-bottom: 0.4rem;
     }
-    .page-hero-subtitle {
-      font-size: 0.98rem;
-      color: #555;
-      max-width: 700px;
-    }
 
-    section { padding: 2.2rem 1rem; }
-    .section-inner { max-width: var(--max-width); margin: 0 auto; }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--blue);
-      position: relative;
-      display: inline-block;
-    }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.2rem;
-      width: 60%;
-      height: 3px;
-      background: var(--orange);
-      border-radius: 999px;
-    }
-    .section-subtitle {
+    .page-subtitle {
       font-size: 0.95rem;
       color: #666;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
       max-width: 650px;
     }
 
@@ -169,23 +161,34 @@
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 1.5rem;
-      align-items: start;
+      align-items: flex-start;
     }
-    .contact-details { font-size: 0.9rem; }
+
+    .contact-details {
+      font-size: 0.9rem;
+    }
+
     .contact-details p { margin-bottom: 0.3rem; }
 
     .branches {
       margin-top: 0.8rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 0.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.8rem;
       font-size: 0.85rem;
     }
-    .branches div {
+
+    .branch-card {
       background: var(--white);
-      padding: 0.7rem;
+      padding: 0.8rem;
       border-radius: 8px;
       border: 1px dashed #e0c9b0;
+    }
+
+    .branch-name {
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
     }
 
     .contact-form {
@@ -196,13 +199,16 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
       font-size: 0.9rem;
     }
+
     .form-row { margin-bottom: 0.6rem; }
+
     .form-row label {
       display: block;
       font-size: 0.8rem;
       margin-bottom: 0.2rem;
       color: #666;
     }
+
     .form-row input,
     .form-row textarea {
       width: 100%;
@@ -211,10 +217,12 @@
       border: 1px solid #d4d4d4;
       font: inherit;
     }
+
     .form-row textarea {
-      min-height: 100px;
+      min-height: 110px;
       resize: vertical;
     }
+
     .btn-primary {
       background: var(--orange);
       color: var(--white);
@@ -227,11 +235,15 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      transition: background 0.2s ease, transform 0.15s ease,
+        box-shadow 0.15s ease;
+      box-shadow: 0 8px 18px rgba(242, 106, 33, 0.3);
     }
-    .info-note {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: #777;
+
+    .btn-primary:hover {
+      background: #e25f1c;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(242, 106, 33, 0.35);
     }
 
     footer {
@@ -239,7 +251,9 @@
       color: var(--white);
       padding: 0.9rem 1rem;
       font-size: 0.8rem;
+      margin-top: 2rem;
     }
+
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -253,9 +267,17 @@
     @media (max-width: 860px) {
       .contact-grid { grid-template-columns: 1fr; }
     }
+
     @media (max-width: 640px) {
-      .nav { flex-direction: column; align-items: flex-start; }
-      nav ul { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
@@ -285,11 +307,11 @@
 
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
       </nav>
 
@@ -300,70 +322,59 @@
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <h1 class="page-hero-title">Contact & Branches</h1>
-      <p class="page-hero-subtitle">
-        Get in touch with our team for quotations, technical support or project discussions. We operate from
-        Riyadh, Jeddah and Dammam and support projects across the Kingdom.
+  <main>
+    <div class="page-inner">
+      <h1 class="page-title">Contact & Branches</h1>
+      <p class="page-subtitle">
+        For inquiries, quotations or technical support, please contact our branches
+        using the details below or send us a message through the contact form.
       </p>
-    </div>
-  </div>
 
-  <section>
-    <div class="section-inner">
       <div class="contact-grid">
-        <div class="contact-details">
-          <h2 class="section-title">Contact Information</h2>
-          <p class="section-subtitle">
-            Please contact us through the details below or send a message using the form. We will reply as soon
-            as possible.
-          </p>
-
+        <section class="contact-details">
           <p><strong>Exquisite System Industry Company</strong></p>
           <p>شركة الأنظمة المتقنة للصناعة</p>
+          <p style="margin-top:0.4rem;">
+            C.R.: 1010778986 · VAT: 311417731400003
+          </p>
           <p style="margin-top:0.4rem;">
             Email: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a><br>
             Website: <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
           </p>
-          <p style="margin-top:0.4rem;">
-            C.R.: 1010778986 · VAT: 311417731400003
-          </p>
 
           <div class="branches">
-            <div>
-              <strong>Riyadh Branch</strong><br>
-              Main branch – Riyadh.<br>
-              Phone: (add number).<br>
-              Address: (add full address).
+            <div class="branch-card">
+              <div class="branch-name">Riyadh Branch</div>
+              <div>Main branch – Riyadh</div>
+              <div>(Add full address here)</div>
+              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
             </div>
-            <div>
-              <strong>Jeddah Branch</strong><br>
-              Phone: (add number).<br>
-              Address: (add full address).
+            <div class="branch-card">
+              <div class="branch-name">Jeddah Branch</div>
+              <div>(Add address here)</div>
+              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
             </div>
-            <div>
-              <strong>Dammam Branch</strong><br>
-              Phone: (add number).<br>
-              Address: (add full address).
+            <div class="branch-card">
+              <div class="branch-name">Dammam Branch</div>
+              <div>(Add address here)</div>
+              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
             </div>
           </div>
 
-          <p class="info-note">
-            You may also share your project drawings and specifications by email so that our team can prepare a
-            detailed quotation.
+          <p style="font-size:0.85rem; color:#777; margin-top:1rem;">
+            You can also include WhatsApp numbers or Google Maps links for each
+            branch to help customers reach your locations more easily.
           </p>
-        </div>
+        </section>
 
         <form class="contact-form">
-          <h2 class="section-title">Send us a Message</h2>
           <div class="form-row">
             <label for="name">Name</label>
             <input id="name" type="text" placeholder="Your name">
           </div>
           <div class="form-row">
-            <label for="company">Company</label>
-            <input id="company" type="text" placeholder="Company / Project">
+            <label for="company">Company / Project</label>
+            <input id="company" type="text" placeholder="Company / Project name">
           </div>
           <div class="form-row">
             <label for="email">Email</label>
@@ -374,27 +385,20 @@
             <input id="phone" type="text" placeholder="+966...">
           </div>
           <div class="form-row">
-            <label for="city">City</label>
-            <input id="city" type="text" placeholder="Riyadh, Jeddah, Dammam…">
-          </div>
-          <div class="form-row">
             <label for="message">Message</label>
             <textarea id="message" placeholder="Describe your project or request a quotation."></textarea>
           </div>
           <button type="submit" class="btn-primary">Send message</button>
-          <p class="info-note">
-            This form is for display only. To receive responses, please integrate it later with your email or a
-            form service.
-          </p>
         </form>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> Exquisite System Industry Company – All rights reserved.</div>
-      
+      <div>Designed to match official company letterhead identity.</div>
+    </div>
   </footer>
 
   <script>
