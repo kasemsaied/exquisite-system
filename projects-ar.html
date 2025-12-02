@@ -5,7 +5,11 @@
   <title>المشاريع | شركة الأنظمة المتقنة للصناعة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="نماذج من مشاريع الألمنيوم والستائر والستائر الرول وأنظمة الشتر المنفذة بواسطة شركة الأنظمة المتقنة للصناعة." />
+        content="نماذج من المشاريع التي نفّذتها شركة الأنظمة المتقنة للصناعة في مجالات الألمنيوم والستائر والرول والشتر في مختلف مناطق المملكة." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -21,17 +25,16 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--white);
+      font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
       color: var(--dark);
-      line-height: 1.6;
-      direction: rtl;
-      text-align: right;
+      line-height: 1.7;
     }
 
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
 
+    /* Top bar */
     .top-bar {
       background: var(--orange);
       color: var(--white);
@@ -46,10 +49,17 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
-      flex-direction: row-reverse;
     }
 
-    header { background: var(--blue); color: var(--white); }
+    /* Header / nav */
+    header {
+      background: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -58,34 +68,38 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      flex-direction: row-reverse;
     }
+
     .logo-area {
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      flex-direction: row-reverse;
     }
-
     .logo-img {
-      width: 68px;
-      height: 68px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
     }
     .logo-img img {
-      width: 90%;
-      height: 90%;
+      width: 92%;
+      height: 92%;
       object-fit: contain;
     }
-
-    .logo-text-english { font-weight: 700; font-size: 0.9rem; line-height: 1.2; }
-    .logo-text-arabic { font-size: 0.85rem; opacity: 0.95; }
+    .logo-text-arabic-main {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+    .logo-text-english {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
 
     nav ul {
       list-style: none;
@@ -93,11 +107,13 @@
       gap: 1rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
-      flex-direction: row-reverse;
     }
     nav a {
       position: relative;
       padding-bottom: 0.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
     }
     nav a::after {
       content: "";
@@ -109,13 +125,23 @@
       background: var(--orange);
       transition: width 0.25s ease;
     }
-    nav a:hover::after { width: 100%; }
+    nav a:hover {
+      opacity: 1;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .nav-link.active {
+      opacity: 1;
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
 
     .lang-switch {
       display: flex;
       gap: 0.4rem;
       font-size: 0.85rem;
-      flex-direction: row-reverse;
     }
     .lang-switch a {
       padding: 0.15rem 0.5rem;
@@ -127,99 +153,91 @@
       border-color: var(--orange);
     }
 
-    .page-hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 45%, #e9f0f7 100%);
-      border-bottom: 3px solid var(--orange);
-    }
-    .page-hero-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2.2rem 1rem 1.6rem;
-    }
-    .page-hero-title {
+    /* Page layout */
+    main { padding: 2.5rem 1rem 2.5rem; }
+    .page-inner { max-width: var(--max-width); margin: 0 auto; }
+
+    .page-title {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--blue);
       margin-bottom: 0.4rem;
+      text-align: center;
     }
-    .page-hero-subtitle {
-      font-size: 0.98rem;
-      color: #555;
-      max-width: 700px;
-    }
-
-    section { padding: 2.2rem 1rem; }
-    .section-inner { max-width: var(--max-width); margin: 0 auto; }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--blue);
-      position: relative;
-      display: inline-block;
-    }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -0.2rem;
-      width: 60%;
-      height: 3px;
-      background: var(--orange);
-      border-radius: 999px;
-    }
-    .section-subtitle {
+    .page-subtitle {
       font-size: 0.95rem;
       color: #666;
-      margin-bottom: 1.4rem;
-      max-width: 650px;
+      margin-bottom: 1.6rem;
+      max-width: 750px;
+      text-align: center;
+      margin-inline: auto;
     }
 
-    .cards-grid {
+    .section-block {
+      margin-bottom: 2.2rem;
+    }
+    .section-heading {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .section-text {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .projects-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.1rem;
     }
-    .card {
+
+    .project-card {
       background: var(--white);
       border-radius: var(--radius);
       padding: 1rem;
       border: 1px solid #e4e4e4;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
       font-size: 0.9rem;
     }
-    .card-tag {
+
+    .project-tag {
       display: inline-block;
       font-size: 0.75rem;
       color: var(--blue);
-      background: rgba(31, 78, 121, 0.08);
+      background: rgba(31,78,121,0.08);
       padding: 0.15rem 0.5rem;
       border-radius: 999px;
       margin-bottom: 0.4rem;
     }
-    .card-title {
+    .project-title {
       font-weight: 600;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.25rem;
       color: var(--dark);
     }
-    .card-meta {
+    .project-meta {
       font-size: 0.8rem;
       color: #777;
       margin-bottom: 0.4rem;
     }
 
-    .project-list {
-      margin-top: 1.5rem;
-      font-size: 0.9rem;
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 1.4rem;
+      text-align: center;
     }
-    .project-list li { margin-bottom: 0.25rem; }
 
     footer {
       background: var(--orange);
       color: var(--white);
       padding: 0.9rem 1rem;
       font-size: 0.8rem;
+      margin-top: 2rem;
     }
     .footer-inner {
       max-width: var(--max-width);
@@ -229,29 +247,37 @@
       gap: 0.5rem;
       justify-content: space-between;
       align-items: center;
-      flex-direction: row-reverse;
     }
 
     @media (max-width: 640px) {
-      .nav { flex-direction: column-reverse; align-items: flex-start; }
-      nav ul { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- الشريط العلوي -->
   <div class="top-bar">
     <div class="top-bar-inner">
-      <div>أعمال الألمنيوم · الستائر · الستائر الرول · أنظمة الشتر</div>
+      <div>أعمال الألمنيوم · الستائر · الرول · الشتر</div>
       <div>
         البريد الإلكتروني:
-        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a>
-        · الموقع:
+        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
+        الموقع:
         <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
       </div>
     </div>
   </div>
 
+  <!-- الهيدر / القائمة -->
   <header>
     <div class="nav">
       <div class="logo-area">
@@ -259,18 +285,18 @@
           <img src="images/exquisite-logo.svg" alt="شعار شركة الأنظمة المتقنة للصناعة">
         </div>
         <div>
-          <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
+          <div class="logo-text-arabic-main">شركة الأنظمة المتقنة للصناعة</div>
           <div class="logo-text-english">Exquisite System Industry Co.</div>
         </div>
       </div>
 
       <nav>
         <ul>
-          <li><a href="index-ar.html">الرئيسية</a></li>
-          <li><a href="about-ar.html">من نحن</a></li>
-          <li><a href="products-ar.html">المنتجات والحلول</a></li>
-          <li><a href="projects-ar.html">المشاريع</a></li>
-          <li><a href="contact-ar.html">اتصل بنا</a></li>
+          <li><a href="index-ar.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about-ar.html" class="nav-link">عن الشركة</a></li>
+          <li><a href="products-ar.html" class="nav-link">المنتجات</a></li>
+          <li><a href="projects-ar.html" class="nav-link active">المشاريع</a></li>
+          <li><a href="contact-ar.html" class="nav-link">التواصل</a></li>
         </ul>
       </nav>
 
@@ -281,142 +307,148 @@
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <h1 class="page-hero-title">المشاريع</h1>
-      <p class="page-hero-subtitle">
-        نماذج مختارة من المشاريع التي تم تنفيذها في مجالات الألمنيوم والواجهات والستائر والستائر الرول
-        وأنظمة الشتر في مختلف قطاعات السوق.
-      </p>
-    </div>
-  </div>
+  <main>
+    <div class="page-inner">
 
-  <section>
-    <div class="section-inner">
-      <h2 class="section-title">مشاريع تجارية ومكتبية</h2>
-      <p class="section-subtitle">
-        واجهات ألمنيوم ونوافذ وأبواب وأنظمة تظليل للمباني التجارية والمكاتب والمعارض.
+      <h1 class="page-title">المشاريع</h1>
+      <p class="page-subtitle">
+        أمثلة مختارة من نوعية المشاريع التي يمكن أن تنفّذها شركة الأنظمة المتقنة للصناعة
+        في مجالات الألمنيوم والواجهات والزجاج والستائر والرول والشتر في مختلف مناطق المملكة.
+        يمكن استبدال هذه الأمثلة لاحقاً بمشاريع حقيقية مع صور وبيانات تفصيلية.
       </p>
 
-      <div class="cards-grid">
-        <article class="card">
-          <span class="card-tag">الرياض</span>
-          <div class="card-title">برج مكاتب – حزمة واجهات ونوافذ ألمنيوم</div>
-          <div class="card-meta">نطاق العمل: واجهات زجاجية، نوافذ، أبواب، ستائر رول داخلية.</div>
-          <p>
-            توريد وتركيب واجهات Curtain Wall ونوافذ وأبواب ألمنيوم مع أنظمة ستائر رول للمكاتب وقاعات
-            الاجتماعات بما يحقق المتطلبات الجمالية والفنية للمشروع.
-          </p>
-        </article>
+      <!-- صف أول: مشاريع تجارية ومكتبية -->
+      <section class="section-block">
+        <h2 class="section-heading">مشاريع تجارية ومكتبية</h2>
+        <p class="section-text">
+          واجهات ألومنيوم وزجاج، نوافذ أبواب، وأنظمة تظليل داخلية وخارجية للمباني الإدارية والمراكز التجارية.
+        </p>
 
-        <article class="card">
-          <span class="card-tag">جدة</span>
-          <div class="card-title">معرض تجاري – واجهة ومحلات مع شتر</div>
-          <div class="card-meta">نطاق العمل: واجهة زجاجية، أبواب أوتوماتيكية، شتر أمني.</div>
-          <p>
-            تنفيذ واجهة عرض حديثة مع شتر خارجي لحماية واجهة المعرض أثناء إغلاق المحل.
-          </p>
-        </article>
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">مبنى مكاتب</span>
+            <div class="project-title">برج إداري – الرياض</div>
+            <div class="project-meta">نطاق العمل: واجهات زجاجية ونوافذ ألومنيوم.</div>
+            <p>
+              توريد وتركيب أنظمة Curtain Wall ونوافذ ألومنيوم سحاب ومفصلية
+              لمبنى إداري متوسط الارتفاع مع مراعاة العزل الحراري والمتطلبات المعمارية للمشروع.
+            </p>
+          </article>
 
-        <article class="card">
-          <span class="card-tag">الدمام</span>
-          <div class="card-title">مبنى إداري – ستائر رول داخلية</div>
-          <div class="card-meta">نطاق العمل: ستائر رول سكرين وبلاك آوت.</div>
-          <p>
-            تركيب أنظمة ستائر رول لمكاتب الموظفين وغرف الاجتماعات والمكاتب التنفيذية بما يوفر الراحة
-            البصرية والتحكم في الضوء.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
+          <article class="project-card">
+            <span class="project-tag">مجمع تجاري</span>
+            <div class="project-title">مركز معارض ومحلات – جدة</div>
+            <div class="project-meta">نطاق العمل: واجهات محلات وزجاج عرض.</div>
+            <p>
+              تنفيذ واجهات ألومنيوم وزجاج لعدد من المحلات داخل مركز تجاري،
+              مع أبواب أوتوماتيكية واستخدام زجاج مناسب لعرض السلع وتقليل الوهج الضوئي.
+            </p>
+          </article>
 
-  <section style="background: var(--light);">
-    <div class="section-inner">
-      <h2 class="section-title">مشاريع سكنية وفندقية</h2>
-      <p class="section-subtitle">
-        حلول للأحياء السكنية والفلل والشقق المفروشة والفنادق والشقق الفندقية.
+          <article class="project-card">
+            <span class="project-tag">مبنى إداري</span>
+            <div class="project-title">مكاتب شركة خدمات – الدمام</div>
+            <div class="project-meta">نطاق العمل: ستائر رول داخلية.</div>
+            <p>
+              توريد وتركيب ستائر رول تعتيم وترشيح ضوء لغرف الاجتماعات والمكاتب،
+              مع إمكانية التحكم اليدوي والموتور حسب طبيعة الاستخدام لكل مساحة.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- صف ثانٍ: مشاريع سكنية وفندقية -->
+      <section class="section-block">
+        <h2 class="section-heading">مشاريع سكنية وفندقية</h2>
+        <p class="section-text">
+          حلول للمجمعات السكنية والفنادق تشمل النوافذ والأبواب الألومنيوم والستائر الداخلية وأنظمة الشتر.
+        </p>
+
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">مجمع فلل</span>
+            <div class="project-title">مجمع سكني خاص – الرياض</div>
+            <div class="project-meta">نطاق العمل: نوافذ وأبواب ألومنيوم وشتر.</div>
+            <p>
+              تنفيذ حزمة متكاملة لنوافذ وأبواب الفلل، مع تركيب شتر خارجي لعدد من الفتحات
+              المختارة لزيادة الخصوصية والتحكم بالضوء والأمان.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">شقق فندقية</span>
+            <div class="project-title">مبنى شقق فندقية – جدة</div>
+            <div class="project-meta">نطاق العمل: ستائر رول وقماشية.</div>
+            <p>
+              توريد وتركيب ستائر رول وطبقات قماشية مزدوجة لغرف النوم وغرف المعيشة
+              بما يضمن مظهراً أنيقاً وتحكماً مناسباً في مستوى الإضاءة.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">فندق حضري</span>
+            <div class="project-title">فندق أعمال – الدمام</div>
+            <div class="project-meta">نطاق العمل: واجهات ونوافذ ألومنيوم.</div>
+            <p>
+              تركيب واجهات ألومنيوم وزجاج للنوافذ والغرف الأمامية للفندق،
+              مع مراعاة حلول العزل الحراري والضوضاء للمناطق المطلة على الشوارع الرئيسة.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- صف ثالث: مشاريع صناعية وخدماتية -->
+      <section class="section-block">
+        <h2 class="section-heading">مشاريع صناعية وخدماتية</h2>
+        <p class="section-text">
+          أنظمة شتر ثقيلة، أبواب ألومنيوم خاصة، وحلول تظليل لمناطق التحميل والمستودعات والمنشآت الخدمية.
+        </p>
+
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-tag">منشأة صناعية</span>
+            <div class="project-title">مستودعات ومناطق تحميل – الدمام</div>
+            <div class="project-meta">نطاق العمل: شتر صناعي ثقيل.</div>
+            <p>
+              تنفيذ شترات معدنية ثقيلة لأبواب المستودعات ومداخل التحميل، مع محركات وحساسات أمان،
+              وتصميم الفتحات وفق احتياجات حركة الشاحنات والمعدات.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">محطات وخدمات</span>
+            <div class="project-title">مركز خدمات لوجستية – الرياض</div>
+            <div class="project-meta">نطاق العمل: أبواب ألومنيوم وأنظمة تظليل.</div>
+            <p>
+              تركيب أبواب ألومنيوم خاصة لمكاتب التشغيل وغرف التحكم، مع حلول تظليل للنوافذ
+              الأمامية للحد من الوهج وتحسين راحة العاملين.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-tag">معارض ومراكز خدمة</span>
+            <div class="project-title">معرض معدات – جدة</div>
+            <div class="project-meta">نطاق العمل: واجهات عرض وشتر حماية أمامية.</div>
+            <p>
+              توريد وتركيب واجهات ألومنيوم وزجاج للمعرض مع شتر حماية أمامي لكل فتحة عرض،
+              بما يوازن بين المظهر الجمالي ومتطلبات الحماية بعد أوقات العمل.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <p class="note">
+        عند توفر مشاريع فعلية يمكن إضافة أسماء العملاء والاستشاريين والمقاولين،
+        مع صور قبل وبعد التنفيذ وروابط خرائط جوجل لمواقع المشاريع (بعد أخذ الموافقات اللازمة).
       </p>
 
-      <div class="cards-grid">
-        <article class="card">
-          <span class="card-tag">مجمع سكني</span>
-          <div class="card-title">نوافذ وأبواب وشتر</div>
-          <div class="card-meta">نطاق العمل: نوافذ وأبواب ألمنيوم، شتر خارجي.</div>
-          <p>
-            تنفيذ نوافذ وأبواب ألمنيوم مع أنظمة شتر خارجية للمساعدة في العزل الحراري والضوضاء وتحسين مستوى
-            الأمان والخصوصية.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">فلل خاصة</span>
-          <div class="card-title">ستائر قماشية وستائر رول</div>
-          <div class="card-meta">نطاق العمل: قياس وخياطة وتركيب الستائر.</div>
-          <p>
-            تنفيذ ستائر لمختلف الفراغات الداخلية (مجالس، صالات، غرف النوم) بما ينسجم مع ديكور كل فيلا.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">فندق / شقق فندقية</span>
-          <div class="card-title">ستائر بلاك آوت وشير</div>
-          <div class="card-meta">نطاق العمل: غرف النزلاء والممرات.</div>
-          <p>
-            تنفيذ ستائر فندقية بمعايير خاصة تضمن التعتيم الكامل عند الحاجة، مع المحافظة على جمالية الغرفة.
-          </p>
-        </article>
-      </div>
     </div>
-  </section>
-
-  <section>
-    <div class="section-inner">
-      <h2 class="section-title">مشاريع صناعية وخاصة</h2>
-      <p class="section-subtitle">
-        أنظمة شتر وأبواب صناعية لمستودعات ومنشآت إنتاجية ومناطق تحميل وتنزيل.
-      </p>
-
-      <div class="cards-grid">
-        <article class="card">
-          <span class="card-tag">منشأة صناعية</span>
-          <div class="card-title">أبواب شتر لمناطق التحميل</div>
-          <div class="card-meta">نطاق العمل: شتر بمقاسات كبيرة ومحركات صناعية.</div>
-          <p>
-            تركيب أبواب شتر ذات متانة عالية مصمّمة لتحمّل التشغيل المتكرر وتسهيل حركة البضائع.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">مستودع تخزين</span>
-          <div class="card-title">أبواب شتر صناعية</div>
-          <div class="card-meta">نطاق العمل: أبواب شتر ومداخل تحميل.</div>
-          <p>
-            حلول شتر متكاملة توازن بين الأمان وسهولة التشغيل والعزل الحراري النسبي حسب طبيعة الاستخدام.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card-tag">منشآت خاصة</span>
-          <div class="card-title">مظلات وهياكل ألمنيوم وزجاج</div>
-          <div class="card-meta">نطاق العمل: مظلات مداخل، قباب، سكاي لايت.</div>
-          <p>
-            تصميم وتنفيذ مظلات وهياكل زجاجية وألمنيوم تضيف قيمة معمارية وجمالية للمبنى.
-          </p>
-        </article>
-      </div>
-
-      <ul class="project-list">
-        <li>يمكن تزويد الاستشاريين والمقاولين بقوائم مفصلة بالمشاريع المرجعية عند الطلب.</li>
-        <li>تتوفر زيارات ميدانية وعينات منتجات لدعم عملية الاختيار واعتماد المواصفات.</li>
-      </ul>
-    </div>
-  </section>
+  </main>
 
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> شركة الأنظمة المتقنة للصناعة – جميع الحقوق محفوظة.</div>
-      <div>تصميم متوافق مع هوية الورق الرسمي للشركة.</div>
+      <div>تصميم متوافق مع هوية ترويسة الشركة الرسمية.</div>
     </div>
   </footer>
 
