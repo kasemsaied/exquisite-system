@@ -2,10 +2,14 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>اتصل بنا | شركة الأنظمة المتقنة للصناعة</title>
+  <title>التواصل والفروع | شركة الأنظمة المتقنة للصناعة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="بيانات التواصل مع شركة الأنظمة المتقنة للصناعة في الرياض وجدة والدمام لطلب عروض الأسعار والدعم الفني." />
+        content="التواصل مع شركة الأنظمة المتقنة للصناعة – بيانات فروع الرياض وجدة والدمام ونموذج طلب عرض سعر أو استفسار." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -21,12 +25,10 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--white);
+      font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
       color: var(--dark);
-      line-height: 1.6;
-      direction: rtl;
-      text-align: right;
+      line-height: 1.7;
     }
 
     a { text-decoration: none; color: inherit; }
@@ -37,6 +39,7 @@
       color: var(--white);
       font-size: 0.9rem;
     }
+
     .top-bar-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -46,10 +49,17 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
-      flex-direction: row-reverse;
     }
 
-    header { background: var(--blue); color: var(--white); }
+    header {
+      background: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
     .nav {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -58,34 +68,42 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      flex-direction: row-reverse;
     }
+
     .logo-area {
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      flex-direction: row-reverse;
     }
 
     .logo-img {
-      width: 68px;
-      height: 68px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
     }
+
     .logo-img img {
-      width: 90%;
-      height: 90%;
+      width: 92%;
+      height: 92%;
       object-fit: contain;
     }
 
-    .logo-text-english { font-weight: 700; font-size: 0.9rem; line-height: 1.2; }
-    .logo-text-arabic { font-size: 0.85rem; opacity: 0.95; }
+    .logo-text-arabic-main {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .logo-text-english {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
 
     nav ul {
       list-style: none;
@@ -93,12 +111,16 @@
       gap: 1rem;
       flex-wrap: wrap;
       font-size: 0.95rem;
-      flex-direction: row-reverse;
     }
+
     nav a {
       position: relative;
       padding-bottom: 0.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
     }
+
     nav a::after {
       content: "";
       position: absolute;
@@ -109,70 +131,48 @@
       background: var(--orange);
       transition: width 0.25s ease;
     }
+
+    nav a:hover { opacity: 1; }
     nav a:hover::after { width: 100%; }
+
+    .nav-link.active { opacity: 1; }
+    .nav-link.active::after { width: 100%; }
 
     .lang-switch {
       display: flex;
       gap: 0.4rem;
       font-size: 0.85rem;
-      flex-direction: row-reverse;
     }
+
     .lang-switch a {
       padding: 0.15rem 0.5rem;
       border-radius: 999px;
       border: 1px solid rgba(255, 255, 255, 0.5);
     }
+
     .lang-switch .active {
       background: var(--orange);
       border-color: var(--orange);
     }
 
-    .page-hero {
-      background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 45%, #e9f0f7 100%);
-      border-bottom: 3px solid var(--orange);
-    }
-    .page-hero-inner {
+    main { padding: 2.5rem 1rem 2.5rem; }
+
+    .page-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1rem 1.6rem;
     }
-    .page-hero-title {
+
+    .page-title {
       font-size: 1.8rem;
       font-weight: 700;
       color: var(--blue);
       margin-bottom: 0.4rem;
     }
-    .page-hero-subtitle {
-      font-size: 0.98rem;
-      color: #555;
-      max-width: 700px;
-    }
 
-    section { padding: 2.2rem 1rem; }
-    .section-inner { max-width: var(--max-width); margin: 0 auto; }
-
-    .section-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--blue);
-      position: relative;
-      display: inline-block;
-    }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: -0.2rem;
-      width: 60%;
-      height: 3px;
-      background: var(--orange);
-      border-radius: 999px;
-    }
-    .section-subtitle {
+    .page-subtitle {
       font-size: 0.95rem;
       color: #666;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.6rem;
       max-width: 650px;
     }
 
@@ -180,23 +180,31 @@
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 1.5rem;
-      align-items: start;
+      align-items: flex-start;
     }
+
     .contact-details { font-size: 0.9rem; }
     .contact-details p { margin-bottom: 0.3rem; }
 
     .branches {
       margin-top: 0.8rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 0.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 0.8rem;
       font-size: 0.85rem;
     }
-    .branches div {
+
+    .branch-card {
       background: var(--white);
-      padding: 0.7rem;
+      padding: 0.8rem;
       border-radius: 8px;
       border: 1px dashed #e0c9b0;
+    }
+
+    .branch-name {
+      font-weight: 600;
+      color: var(--blue);
+      margin-bottom: 0.2rem;
     }
 
     .contact-form {
@@ -207,13 +215,16 @@
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
       font-size: 0.9rem;
     }
+
     .form-row { margin-bottom: 0.6rem; }
+
     .form-row label {
       display: block;
       font-size: 0.8rem;
       margin-bottom: 0.2rem;
       color: #666;
     }
+
     .form-row input,
     .form-row textarea {
       width: 100%;
@@ -222,10 +233,12 @@
       border: 1px solid #d4d4d4;
       font: inherit;
     }
+
     .form-row textarea {
-      min-height: 100px;
+      min-height: 110px;
       resize: vertical;
     }
+
     .btn-primary {
       background: var(--orange);
       color: var(--white);
@@ -238,11 +251,15 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      transition: background 0.2s ease, transform 0.15s ease,
+        box-shadow 0.15s ease;
+      box-shadow: 0 8px 18px rgba(242, 106, 33, 0.3);
     }
-    .info-note {
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      color: #777;
+
+    .btn-primary:hover {
+      background: #e25f1c;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(242, 106, 33, 0.35);
     }
 
     footer {
@@ -250,7 +267,9 @@
       color: var(--white);
       padding: 0.9rem 1rem;
       font-size: 0.8rem;
+      margin-top: 2rem;
     }
+
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -259,15 +278,22 @@
       gap: 0.5rem;
       justify-content: space-between;
       align-items: center;
-      flex-direction: row-reverse;
     }
 
     @media (max-width: 860px) {
       .contact-grid { grid-template-columns: 1fr; }
     }
+
     @media (max-width: 640px) {
-      .nav { flex-direction: column-reverse; align-items: flex-start; }
-      nav ul { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
@@ -275,11 +301,11 @@
 
   <div class="top-bar">
     <div class="top-bar-inner">
-      <div>أعمال الألمنيوم · الستائر · الستائر الرول · أنظمة الشتر</div>
+      <div>أعمال الألمنيوم · الستائر · الرول · الشتر</div>
       <div>
         البريد الإلكتروني:
-        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a>
-        · الموقع:
+        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
+        الموقع:
         <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
       </div>
     </div>
@@ -292,18 +318,18 @@
           <img src="images/exquisite-logo.svg" alt="شعار شركة الأنظمة المتقنة للصناعة">
         </div>
         <div>
-          <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
+          <div class="logo-text-arabic-main">شركة الأنظمة المتقنة للصناعة</div>
           <div class="logo-text-english">Exquisite System Industry Co.</div>
         </div>
       </div>
 
       <nav>
         <ul>
-          <li><a href="index-ar.html">الرئيسية</a></li>
-          <li><a href="about-ar.html">من نحن</a></li>
-          <li><a href="products-ar.html">المنتجات والحلول</a></li>
-          <li><a href="projects-ar.html">المشاريع</a></li>
-          <li><a href="contact-ar.html">اتصل بنا</a></li>
+          <li><a href="index-ar.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about-ar.html" class="nav-link">عن الشركة</a></li>
+          <li><a href="products-ar.html" class="nav-link">المنتجات</a></li>
+          <li><a href="projects-ar.html" class="nav-link">المشاريع</a></li>
+          <li><a href="contact-ar.html" class="nav-link active">التواصل</a></li>
         </ul>
       </nav>
 
@@ -314,65 +340,54 @@
     </div>
   </header>
 
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <h1 class="page-hero-title">اتصل بنا</h1>
-      <p class="page-hero-subtitle">
-        يسعدنا تواصلكم معنا لطلب عروض الأسعار أو الاستفسار عن المنتجات أو التنسيق لزيارة ميدانية للمشروع.
+  <main>
+    <div class="page-inner">
+      <h1 class="page-title">التواصل والفروع</h1>
+      <p class="page-subtitle">
+        للاستفسارات أو طلب عروض الأسعار أو التنسيق لزيارة موقع المشروع، يمكنكم التواصل
+        معنا عبر بيانات الفروع أو من خلال نموذج التواصل.
       </p>
-    </div>
-  </div>
 
-  <section>
-    <div class="section-inner">
       <div class="contact-grid">
-        <div class="contact-details">
-          <h2 class="section-title">بيانات الاتصال</h2>
-          <p class="section-subtitle">
-            يمكنكم التواصل معنا من خلال البيانات التالية، أو تعبئة النموذج المرفق وسيقوم فريقنا بالتواصل معكم
-            في أقرب وقت ممكن.
-          </p>
-
+        <section class="contact-details">
           <p><strong>شركة الأنظمة المتقنة للصناعة</strong></p>
-          <p>Exquisite System Industry Company</p>
-
+          <p>Exquisite System Industry Co.</p>
+          <p style="margin-top:0.4rem;">
+            السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
+          </p>
           <p style="margin-top:0.4rem;">
             البريد الإلكتروني:
             <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a><br>
             الموقع:
             <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
           </p>
-          <p style="margin-top:0.4rem;">
-            السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
-          </p>
 
           <div class="branches">
-            <div>
-              <strong>فرع الرياض</strong><br>
-              الفرع الرئيسي – الرياض.<br>
-              الهاتف: (أضف الرقم).<br>
-              العنوان: (أضف العنوان التفصيلي).
+            <div class="branch-card">
+              <div class="branch-name">فرع الرياض</div>
+              <div>الفرع الرئيسي – الرياض</div>
+              <div>(يضاف العنوان بالتفصيل)</div>
+              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
             </div>
-            <div>
-              <strong>فرع جدة</strong><br>
-              الهاتف: (أضف الرقم).<br>
-              العنوان: (أضف العنوان التفصيلي).
+            <div class="branch-card">
+              <div class="branch-name">فرع جدة</div>
+              <div>(يضاف العنوان)</div>
+              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
             </div>
-            <div>
-              <strong>فرع الدمام</strong><br>
-              الهاتف: (أضف الرقم).<br>
-              العنوان: (أضف العنوان التفصيلي).
+            <div class="branch-card">
+              <div class="branch-name">فرع الدمام</div>
+              <div>(يضاف العنوان)</div>
+              <div style="margin-top:0.3rem;">الهاتف: (يضاف الرقم)</div>
             </div>
           </div>
 
-          <p class="info-note">
-            يمكن إرسال المخططات والمواصفات الفنية الخاصة بالمشروع عبر البريد الإلكتروني ليتم إعداد عرض سعر
-            تفصيلي من قبل الفريق الفني.
+          <p style="font-size:0.85rem; color:#777; margin-top:1rem;">
+            يمكن إضافة أرقام واتساب لكل فرع وروابط خرائط جوجل لتسهيل الوصول لمواقع
+            الفروع على العملاء.
           </p>
-        </div>
+        </section>
 
         <form class="contact-form">
-          <h2 class="section-title">نموذج الاتصال</h2>
           <div class="form-row">
             <label for="name">الاسم</label>
             <input id="name" type="text" placeholder="اكتب اسمك هنا">
@@ -386,30 +401,23 @@
             <input id="email" type="email" placeholder="name@example.com">
           </div>
           <div class="form-row">
-            <label for="phone">الجوال / الهاتف</label>
+            <label for="phone">رقم الجوال / الهاتف</label>
             <input id="phone" type="text" placeholder="+966...">
           </div>
           <div class="form-row">
-            <label for="city">المدينة</label>
-            <input id="city" type="text" placeholder="الرياض، جدة، الدمام...">
-          </div>
-          <div class="form-row">
             <label for="message">الرسالة</label>
-            <textarea id="message" placeholder="اكتب تفاصيل المشروع أو طلب عرض السعر."></textarea>
+            <textarea id="message" placeholder="صف طلبك أو تفاصيل المشروع."></textarea>
           </div>
           <button type="submit" class="btn-primary">إرسال الرسالة</button>
-          <p class="info-note">
-            هذا النموذج للعرض فقط، ويمكن ربطه لاحقاً بنظام استلام الرسائل أو البريد الإلكتروني حسب رغبة الشركة.
-          </p>
         </form>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     <div class="footer-inner">
       <div>© <span id="year"></span> شركة الأنظمة المتقنة للصناعة – جميع الحقوق محفوظة.</div>
-      <div>تصميم متوافق مع هوية الورق الرسمي للشركة.</div>
+      <div>تصميم متوافق مع هوية ترويسة الشركة الرسمية.</div>
     </div>
   </footer>
 
