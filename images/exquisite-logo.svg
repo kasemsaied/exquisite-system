@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="none"/>
+
+  <!-- Outer blue circle -->
+  <circle cx="100" cy="100" r="90" fill="#1f4e79"/>
+
+  <!-- Inner orange circle -->
+  <circle cx="100" cy="100" r="70" fill="#f26a21"/>
+
+  <!-- ES letters -->
+  <text x="50%" y="50%"
+        text-anchor="middle"
+        dominant-baseline="central"
+        font-family="Segoe UI, system-ui, sans-serif"
+        font-weight="700"
+        font-size="64"
+        fill="#ffffff">
+    ES
+  </text>
+
+  <!-- Small Arabic text hint (optional, decorative only) -->
+  <text x="50%" y="155"
+        text-anchor="middle"
+        font-family="Segoe UI, system-ui, sans-serif"
+        font-size="10"
+        fill="#ffffff"
+        opacity="0.75">
+    Exquisite System Industry Co.
+  </text>
+</svg>
