@@ -2,12 +2,44 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>الرئيسية | شركة الأنظمة المتقنة للصناعة</title>
+  <title>شركة الأنظمة المتقنة للصناعة | حلول الألمنيوم والظل للمباني الحديثة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="شركة الأنظمة المتقنة للصناعة – أعمال الألمنيوم، الواجهات الزجاجية، الستائر، الرول، والشتر للمباني السكنية والتجارية والصناعية في السعودية." />
+        content="شركة الأنظمة المتقنة للصناعة – أعمال الألمنيوم والواجهات الزجاجية والستائر والرول والشتر للمشاريع السكنية والتجارية والصناعية في مختلف مناطق المملكة." />
+  <meta name="keywords"
+        content="ألومنيوم, نوافذ ألومنيوم, واجهات زجاجية, ستائر رول, شتر, الرياض, جدة, الدمام, شركة الأنظمة المتقنة للصناعة" />
 
   <link rel="canonical" href="https://kasemsaied.github.io/exquisite-system/index-ar.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="شركة الأنظمة المتقنة للصناعة | حلول الألمنيوم والظل للمباني الحديثة" />
+  <meta property="og:description"
+        content="أعمال الألمنيوم والواجهات الزجاجية والستائر والرول والشتر للمباني السكنية والتجارية والصناعية في الرياض وجدة والدمام." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kasemsaied.github.io/exquisite-system/index-ar.html" />
+  <meta property="og:image" content="https://kasemsaied.github.io/exquisite-system/images/exquisite-logo.svg" />
+  <meta property="og:locale" content="ar_SA" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "شركة الأنظمة المتقنة للصناعة",
+    "url": "https://kasemsaied.github.io/exquisite-system/index-ar.html",
+    "logo": "https://kasemsaied.github.io/exquisite-system/images/exquisite-logo.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SA"
+    },
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "perfectsystemeo@gmail.com",
+      "areaServed": "SA"
+    }]
+  }
+  </script>
 
   <style>
     :root {
@@ -27,10 +59,11 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #fafafa;
       color: var(--dark);
       line-height: 1.7;
+      direction: rtl;
       text-align: right;
     }
 
@@ -44,7 +77,7 @@
       display: block;
     }
 
-    /* شريط علوي */
+    /* Top bar */
     .top-bar {
       background: var(--orange);
       color: var(--white);
@@ -60,15 +93,10 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 0.5rem;
+      direction: rtl;
     }
 
-    .top-bar-inner div {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.3rem;
-    }
-
-    /* الهيدر والقائمة */
+    /* Header / Navigation */
     header {
       background: var(--blue);
       color: var(--white);
@@ -86,6 +114,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
+      direction: rtl;
     }
 
     .logo-area {
@@ -115,13 +144,13 @@
 
     .logo-text-english-main {
       font-weight: 700;
-      font-size: 0.9rem;
-      line-height: 1.2;
+      font-size: 0.95rem;
+      line-height: 1.3;
     }
 
     .logo-text-arabic {
       font-size: 0.85rem;
-      opacity: 0.95;
+      opacity: 0.9;
     }
 
     nav ul {
@@ -186,7 +215,7 @@
       border-color: var(--orange);
     }
 
-    /* الهيرو */
+    /* Hero */
     .hero {
       background: linear-gradient(135deg, #ffffff 0%, #f1f4f8 45%, #e9f0f7 100%);
       border-bottom: 3px solid var(--orange);
@@ -195,7 +224,7 @@
     .hero-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.5rem 1rem 2rem;
+      padding: 2.5rem 1rem 2.2rem;
       display: grid;
       gap: 2rem;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -203,16 +232,17 @@
     }
 
     .hero-title {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 700;
       color: var(--blue);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero-subtitle {
       color: var(--dark);
       font-size: 1.02rem;
       margin-bottom: 1rem;
+      max-width: 600px;
     }
 
     .hero-badges {
@@ -225,7 +255,7 @@
     .badge {
       background: rgba(242, 106, 33, 0.08);
       color: var(--orange);
-      padding: 0.3rem 0.7rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 999px;
       font-size: 0.8rem;
       border: 1px solid rgba(242, 106, 33, 0.4);
@@ -235,54 +265,11 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .btn-primary {
-      background: var(--orange);
-      color: var(--white);
-      padding: 0.55rem 1.3rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--blue);
-      padding: 0.55rem 1.3rem;
-      border-radius: 999px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      border: 1px solid var(--blue);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        background-color 0.2s ease,
-        color 0.2s ease;
-    }
-
-    .btn-primary:hover,
-    .btn-secondary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+      margin-bottom: 0.9rem;
     }
 
     .hero-meta {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #777;
     }
 
@@ -305,7 +292,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 0.6rem;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
     }
 
     .hero-image-item {
@@ -320,9 +307,9 @@
       margin-bottom: 0.15rem;
     }
 
-    /* الأقسام العامة */
+    /* Sections */
     section {
-      padding: 2.2rem 1rem;
+      padding: 2.3rem 1rem;
     }
 
     .section-inner {
@@ -333,7 +320,7 @@
     .section-title {
       font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.7rem;
       color: var(--blue);
       position: relative;
       display: inline-block;
@@ -353,69 +340,24 @@
     .section-subtitle {
       font-size: 0.95rem;
       color: #666;
-      margin-bottom: 1.4rem;
-      max-width: 700px;
+      margin-bottom: 1.3rem;
+      max-width: 650px;
     }
 
-    /* عن الشركة */
-    .about-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: start;
-    }
-
-    .about-card {
-      background: var(--white);
-      padding: 1.3rem;
-      border-radius: var(--radius);
-      border-right: 4px solid var(--blue);
-      font-size: 0.95rem;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-    }
-
-    .about-facts {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .fact-item {
-      background: var(--white);
-      border-radius: 8px;
-      padding: 0.9rem;
-      border: 1px solid #e1e1e1;
-    }
-
-    .fact-number {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--orange);
-      margin-bottom: 0.1rem;
-    }
-
-    /* البطاقات (الخدمات/المنتجات) */
+    /* Cards */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 1.1rem;
     }
 
     .card {
       background: var(--white);
-      border-radius: var(--radius);
-      padding: 1rem;
+      border-radius: 16px;
+      padding: 1.1rem;
       border: 1px solid #e4e4e4;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
       font-size: 0.9rem;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     }
 
     .card-tag {
@@ -443,21 +385,47 @@
       margin-bottom: 0.2rem;
     }
 
-    /* قسم المشاريع المختصر */
-    .projects-note {
-      font-size: 0.9rem;
-      color: #555;
-      margin-bottom: 1rem;
+    /* CTA band */
+    .cta-band {
+      background: linear-gradient(135deg, #fdf3eb 0%, #ffe4d1 45%, #f9f1ea 100%);
+      border-top: 1px solid #f3d2b5;
+      border-bottom: 1px solid #f3d2b5;
+      padding: 2.2rem 1rem;
+      margin-top: 1.2rem;
     }
 
-    /* قسم التواصل في الصفحة الرئيسية */
-    .home-contact {
+    .cta-inner {
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 1.5rem;
+      color: var(--blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-text {
+      font-size: 0.95rem;
+      color: #555;
+      max-width: 680px;
+      margin: 0 auto 1.1rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* Contact section */
+    .contact-section {
       background: #fdf9f6;
       border-top: 1px solid #f0e3d6;
       border-bottom: 3px solid var(--orange);
     }
 
-    .home-contact-grid {
+    .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 1.5rem;
@@ -487,7 +455,7 @@
       border: 1px dashed #e0c9b0;
     }
 
-    .mini-form {
+    .contact-form {
       background: var(--white);
       border-radius: var(--radius);
       padding: 1rem;
@@ -496,37 +464,90 @@
       font-size: 0.9rem;
     }
 
-    .mini-form .form-row {
+    .form-row {
       margin-bottom: 0.6rem;
     }
 
-    .mini-form label {
+    .form-row label {
       display: block;
       font-size: 0.8rem;
       margin-bottom: 0.2rem;
       color: #666;
     }
 
-    .mini-form input,
-    .mini-form textarea {
+    .form-row input,
+    .form-row textarea {
       width: 100%;
       padding: 0.45rem 0.6rem;
       border-radius: 6px;
       border: 1px solid #d4d4d4;
       font: inherit;
-      text-align: right;
     }
 
-    .mini-form textarea {
-      min-height: 90px;
+    .form-row textarea {
+      min-height: 100px;
       resize: vertical;
     }
 
-    /* الفوتر */
-    footer {
+    /* Buttons */
+    .btn-primary {
       background: var(--orange);
       color: var(--white);
-      padding: 1.4rem 1rem 1.1rem;
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--blue);
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid var(--blue);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Micro animations */
+    .btn-primary,
+    .btn-secondary {
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--orange);
+      color: #ffffff;
+      padding: 1.6rem 1rem 1.2rem;
       font-size: 0.85rem;
       margin-top: 2.2rem;
     }
@@ -584,10 +605,10 @@
       gap: 0.5rem;
     }
 
-    /* زر واتساب */
+    /* WhatsApp Button */
     .whatsapp-float {
       position: fixed;
-      left: 18px; /* على اليسار لأن الموقع عربي */
+      left: 18px;
       bottom: 18px;
       width: 52px;
       height: 52px;
@@ -608,11 +629,10 @@
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
     }
 
-    /* تجاوب */
+    /* Responsive */
     @media (max-width: 860px) {
       .hero-inner,
-      .about-grid,
-      .home-contact-grid {
+      .contact-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -627,9 +647,8 @@
         justify-content: flex-start;
         flex-wrap: wrap;
       }
-      .top-bar-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero-inner {
+        padding-top: 2rem;
       }
     }
 
@@ -642,30 +661,25 @@
 </head>
 <body>
 
-  <!-- الشريط العلوي -->
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="top-bar-inner">
+      <div>أعمال الألمنيوم · الستائر · الرول · أنظمة الشتر</div>
       <div>
-        <span>أعمال الألمنيوم</span> ·
-        <span>الستائر</span> ·
-        <span>الرول</span> ·
-        <span>أنظمة الشتر</span>
-      </div>
-      <div>
-        <span>البريد:</span>
-        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
-        <span>الموقع:</span>
+        البريد الإلكتروني:
+        <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a>
+        · الموقع:
         <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
       </div>
     </div>
   </div>
 
-  <!-- الهيدر -->
+  <!-- Header -->
   <header>
     <div class="nav">
       <div class="logo-area">
         <div class="logo-img">
-          <img src="images/exquisite-logo.svg" alt="Exquisite System Industry Logo">
+          <img src="images/exquisite-logo.svg" alt="شعار شركة الأنظمة المتقنة للصناعة">
         </div>
         <div>
           <div class="logo-text-arabic">شركة الأنظمة المتقنة للصناعة</div>
@@ -690,32 +704,29 @@
     </div>
   </header>
 
-  <!-- الهيرو -->
-  <main class="hero">
+  <!-- Hero -->
+  <main class="hero" id="home">
     <div class="hero-inner">
       <div>
-        <h1 class="hero-title">
-          حلول ألمنيوم وتظليل متكاملة لمباني اليوم
-        </h1>
+        <h1 class="hero-title">حلول الألمنيوم والظل للمباني الحديثة</h1>
         <p class="hero-subtitle">
-          شركة الأنظمة المتقنة للصناعة متخصّصة في أعمال الألمنيوم، الواجهات الزجاجية،
-          الستائر، الرول، وأنظمة الشتر للمباني السكنية والتجارية والصناعية في مختلف
-          مناطق المملكة.
+          شركة الأنظمة المتقنة للصناعة متخصصة في أعمال الألمنيوم والواجهات الزجاجية والستائر الداخلية
+          والرول وأنظمة الشتر للمشاريع السكنية والتجارية والصناعية في مختلف مناطق المملكة.
         </p>
 
         <div class="hero-badges">
           <span class="badge">الرياض · جدة · الدمام</span>
           <span class="badge">توريد وتركيب متكامل</span>
-          <span class="badge">تصاميم وحلول حسب متطلبات المشروع</span>
+          <span class="badge">تصميم ورسومات تنفيذية وتنفيذ في الموقع</span>
         </div>
 
         <div class="hero-buttons">
-          <a href="contact-ar.html" class="btn-primary">طلب عرض سعر</a>
-          <a href="products-ar.html" class="btn-secondary">استعراض المنتجات والحلول</a>
+          <a href="#contact" class="btn-primary">طلب عرض سعر</a>
+          <a href="#products" class="btn-secondary">عرض المنتجات والحلول</a>
         </div>
 
         <div class="hero-meta">
-          شركة صناعية مرخّصة · مسجّلة في ضريبة القيمة المضافة · تخدم المقاولين والاستشاريين وملّاك المباني.
+          شركة صناعية مرخصة · مسجلة في ضريبة القيمة المضافة · تخدم المقاولين والاستشاريين ومالكي المباني.
         </div>
       </div>
 
@@ -723,81 +734,72 @@
         <div class="hero-image-title">لمحة سريعة عن الشركة</div>
         <div class="hero-image-grid">
           <div class="hero-image-item">
-            <strong>النشاط الرئيسي</strong>
-            أنظمة الألمنيوم للنوافذ والأبواب والواجهات، حلول التظليل الداخلية، وأنظمة الشتر.
+            <strong>الأنشطة الرئيسية</strong>
+            واجهات ألومنيوم وزجاج، نوافذ وأبواب، أنظمة تظليل، ستائر رول وأنظمة شتر.
           </div>
           <div class="hero-image-item">
-            <strong>العملاء</strong>
-            مقاولون، مطوّرون عقاريون، استشاريون، وملّاك مبانٍ سكنية وتجارية.
+            <strong>نوع العملاء</strong>
+            مقاولون، مطوّرون عقاريون، استشاريون، ملاك مبانٍ تجارية وسكنية.
           </div>
           <div class="hero-image-item">
             <strong>نطاق الخدمة</strong>
-            مشاريع في الرياض وجدة والدمام مع إمكانية التغطية لمناطق أخرى حسب المشروع.
+            مشاريع في مختلف مناطق المملكة من خلال فروعنا في الرياض وجدة والدمام.
           </div>
           <div class="hero-image-item">
-            <strong>الالتزام</strong>
-            جودة في المواد، دقة في التصنيع والتركيب، ودعم فني بعد التسليم.
+            <strong>التزامنا</strong>
+            مواد عالية الجودة، تنفيذ دقيق، وخدمة ما بعد البيع موثوقة.
           </div>
         </div>
       </aside>
     </div>
   </main>
 
-  <!-- عن الشركة -->
-  <section>
+  <!-- About -->
+  <section id="about">
     <div class="section-inner">
       <h2 class="section-title">عن شركة الأنظمة المتقنة للصناعة</h2>
       <p class="section-subtitle">
-        شركة سعودية صناعية تقدّم حلولاً متكاملة في أعمال الألمنيوم والتظليل والشتر، بدءاً من
-        دراسة المتطلبات والمخططات وصولاً إلى التصنيع والتركيب في الموقع، مع مراعاة مواصفات
-        المشروع والجدول الزمني والميزانية.
+        شركة سعودية صناعية متخصصة في أنظمة الألمنيوم والواجهات الزجاجية وحلول التظليل والستائر،
+        نقدّم حلولاً متكاملة من مرحلة التصميم والرسومات التنفيذية وحتى التصنيع والتوريد والتركيب في الموقع.
       </p>
 
-      <div class="about-grid">
-        <div class="about-card">
+      <div class="cards-grid">
+        <article class="card">
+          <span class="card-tag">خدمة متكاملة</span>
+          <div class="card-title">تصميم وتصنيع وتركيب</div>
           <p>
-            نقوم بالربط بين المتطلبات التصميمية على المخططات وبين التنفيذ العملي في الموقع؛ حيث
-            نراجع المخططات مع الاستشاري والمقاول، ونقترح الأنظمة المناسبة، ثم ننتقل إلى مرحلة
-            التصنيع والتركيب مع متابعة فنية مستمرة حتى التسليم.
+            نعمل مع الاستشاري والمقاول على اختيار قطاعات الألمنيوم وأنواع الزجاج والتفاصيل الفنية،
+            ثم نقوم بالتصنيع والتركيب وفق المواصفات والجدول الزمني للمشروع.
           </p>
-          <p style="margin-top:0.6rem;">
-            بوجود فروع في الرياض وجدة والدمام يمكننا دعم المشاريع السكنية والتجارية والصناعية
-            بحلول عملية وواضحة، مع نقطة اتصال واحدة لحزمة الألمنيوم والتظليل والشتر.
-          </p>
-        </div>
+        </article>
 
-        <div>
-          <div class="about-facts">
-            <div class="fact-item">
-              <div class="fact-number">3+</div>
-              <div>فروع تشغيلية: الرياض، جدة، الدمام.</div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-number">ألمنيوم</div>
-              <div>نوافذ، أبواب، واجهات زجاجية وأنظمة معمارية.</div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-number">تظليل</div>
-              <div>ستائر رول، بلاكاوت وسكرين، وستائر داخلية متنوعة.</div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-number">شتر</div>
-              <div>أنظمة شتر يدوية وموتورة للوحدات السكنية والتجارية والصناعية.</div>
-            </div>
-          </div>
-        </div>
+        <article class="card">
+          <span class="card-tag">حضور صناعي</span>
+          <div class="card-title">الرياض · جدة · الدمام</div>
+          <p>
+            فروعنا وفرق العمل الميدانية تتيح لنا تنفيذ مشاريع في مناطق مختلفة من المملكة،
+            من المباني الصغيرة وحتى المجمعات التجارية والصناعية.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-tag">جودة واعتمادية</span>
+          <div class="card-title">مواد معتمدة وخدمة ما بعد البيع</div>
+          <p>
+            نعتمد أنظمة ألومنيوم وأقمشة ومحركات معروفة، ونقدّم الدعم الفني وخدمات ما بعد البيع
+            للحفاظ على كفاءة أنظمة الشتر والستائر لدى عملائنا.
+          </p>
+        </article>
       </div>
-
     </div>
   </section>
 
-  <!-- المنتجات والحلول (مختصر) -->
-  <section style="background: var(--light);">
+  <!-- Products preview -->
+  <section id="products" style="background: var(--light);">
     <div class="section-inner">
-      <h2 class="section-title">المنتجات والحلول الرئيسية</h2>
+      <h2 class="section-title">أهم المنتجات والحلول</h2>
       <p class="section-subtitle">
-        يمكن طلب كل مجموعة من المنتجات بشكل مستقل، أو كحزمة متكاملة تشمل الألمنيوم والتظليل والشتر
-        حسب طبيعة المشروع.
+        تشمل حلولنا أنظمة الألمنيوم، والستائر الداخلية، وأنظمة الشتر للمباني الجديدة ومشاريع إعادة التأهيل.
       </p>
 
       <div class="cards-grid">
@@ -805,167 +807,197 @@
           <span class="card-tag">أنظمة الألمنيوم</span>
           <div class="card-title">نوافذ وأبواب وواجهات</div>
           <p>
-            تصنيع وتركيب نوافذ وأبواب ألمنيوم وواجهات زجاجية للمباني السكنية والتجارية.
+            نوافذ وأبواب وواجهات ألومنيوم مخصّصة للمباني السكنية والتجارية.
           </p>
           <ul class="card-list">
-            <li>نوافذ سحب ومفصلية</li>
-            <li>أبواب مداخل وأبواب داخلية خارجية</li>
-            <li>واجهات زجاجية (Curtain Wall & Shopfront)</li>
+            <li>نوافذ وأبواب منزلقة ومفصلية</li>
+            <li>واجهات ومحلات تجارية ومداخل</li>
+            <li>أنظمة واجهات ستارية Curtain Wall</li>
           </ul>
         </article>
 
         <article class="card">
           <span class="card-tag">التظليل الداخلي</span>
-          <div class="card-title">ستائر رول وستائر داخلية</div>
+          <div class="card-title">الستائر والستائر الرول</div>
           <p>
-            حلول تظليل عملية لغرف النوم والمكاتب وغرف الاجتماعات والمناطق المشتركة.
+            حلول عملية وأنيقة للمكاتب والفنادق والمنازل، بخيارات يدوية أو كهربائية.
           </p>
           <ul class="card-list">
-            <li>ستائر رول بلاكاوت وسكرين</li>
-            <li>تشغيل يدوي أو موتر</li>
-            <li>ستائر فندقية (شيفون + بلاكاوت)</li>
+            <li>ستائر رول بلاك آوت و Sunscreen</li>
+            <li>ستائر قماش للفنادق والشقق السكنية</li>
+            <li>حلول تقسيم المكاتب مع ستائر مدمجة</li>
           </ul>
         </article>
 
         <article class="card">
           <span class="card-tag">أنظمة الشتر</span>
-          <div class="card-title">شتر للوحدات السكنية والتجارية</div>
+          <div class="card-title">أمان وتحكم في الضوء</div>
           <p>
-            أنظمة شتر للأبواب والنوافذ، توفر الأمان والتحكم في الضوء والخصوصية.
+            شتر خارجي للفيلات والمحلات والمستودعات، حسب مقاس الفتحة ومستوى الأمان المطلوب.
           </p>
           <ul class="card-list">
-            <li>شتر للوحدات السكنية (فلل وشقق)</li>
-            <li>شتر للمحلات والمعارض</li>
-            <li>شتر للمخازن والبوابات الصناعية</li>
+            <li>شتر يدوي وكهربائي</li>
+            <li>ريش معزولة أو مثقبة</li>
+            <li>شتر صناعي للخدمات الثقيلة</li>
           </ul>
         </article>
 
         <article class="card">
           <span class="card-tag">حزم متكاملة</span>
-          <div class="card-title">توريد وتركيب من الألف إلى الياء</div>
+          <div class="card-title">من الرفع المساحي للتسليم النهائي</div>
           <p>
-            حزم متكاملة تشمل الألمنيوم والتظليل والشتر مع نقطة اتصال واحدة للمشروع.
+            نتولى كامل نطاق العمل: الرفع المساحي، الرسومات التنفيذية، التصنيع،
+            التركيب، والتسليم النهائي للمشروع.
           </p>
           <ul class="card-list">
-            <li>حزم للمجمعات السكنية</li>
-            <li>حزم لمراكز تجارية ومكاتب</li>
-            <li>تنسيق كامل مع الاستشاري والمقاول</li>
+            <li>زيارة فنية ورفع المقاسات في الموقع</li>
+            <li>تنسيق مع الاستشاري والمقاول الرئيسي</li>
+            <li>اختبارات وتشغيل وتدريب العميل</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- لمحة عن نوعية المشاريع -->
-  <section>
+  <!-- Projects teaser -->
+  <section id="projects-teaser">
     <div class="section-inner">
-      <h2 class="section-title">أنواع المشاريع التي يمكن خدمتها</h2>
-      <p class="projects-note">
-        تخدم الشركة مشاريع متعددة مثل المجمعات السكنية، الفلل، الأبراج السكنية، المراكز التجارية،
-        المكاتب، المستودعات والمباني الصناعية. يمكن مشاركة قائمة مراجع تفصيلية عند طلب تأهيل رسمي
-        أو تسجيل مورد.
+      <h2 class="section-title">نماذج من المشاريع</h2>
+      <p class="section-subtitle">
+        فيما يلي أمثلة لأنواع المشاريع التي تُستخدم فيها حلول الألمنيوم والستائر والشتر لدينا،
+        ويمكن لاحقاً استبدال هذه الأمثلة بأسماء مشاريع حقيقية وصور تفصيلية.
       </p>
 
       <div class="cards-grid">
         <article class="card">
-          <span class="card-tag">سكني</span>
-          <div class="card-title">فلل ومجمعات سكنية</div>
+          <span class="card-tag">مبنى تجاري</span>
+          <div class="card-title">برج مكاتب – الرياض</div>
           <p>
-            نوافذ وأبواب ألمنيوم، ستائر رول وغرف نوم، وأنظمة شتر للواجهات المطلّة على الشوارع.
+            توريد وتركيب نوافذ وأبواب وواجهة زجاجية ستارية لمبنى مكاتب متوسط الارتفاع،
+            مع الرسومات التنفيذية والتصنيع والتركيب في الموقع.
           </p>
         </article>
 
         <article class="card">
-          <span class="card-tag">تجاري</span>
-          <div class="card-title">مباني تجارية ومكتبية</div>
+          <span class="card-tag">مجمع سكني</span>
+          <div class="card-title">مجمع سكني مغلق – جدة</div>
           <p>
-            واجهات زجاجية، أبواب مداخل، وستائر رول لغرف الاجتماعات والمكاتب التنفيذية.
+            حزمة متكاملة من أبواب ونوافذ ألومنيوم، وستائر رول داخلية، وشتر خارجي
+            لعدد من الفلل والشقق السكنية.
           </p>
         </article>
 
         <article class="card">
-          <span class="card-tag">صناعي</span>
-          <div class="card-title">مستودعات ومباني خدمية</div>
+          <span class="card-tag">منشأة صناعية</span>
+          <div class="card-title">مستودعات ومناطق تحميل – الدمام</div>
           <p>
-            أنظمة شتر للأبواب الكبيرة ومناطق التحميل، مع ألمنيوم بسيط لمكاتب الإدارة.
+            أنظمة شتر للخدمات الثقيلة لأبواب التحميل والخدمات، مع بعض الأعمال الخاصة
+            بأبواب الألومنيوم والفتحات التهووية.
           </p>
         </article>
+      </div>
+
+      <p style="font-size:0.85rem;color:#777;margin-top:1.1rem;">
+        لمزيد من الأمثلة يمكن زيارة
+        <a href="projects-ar.html">صفحة المشاريع</a>. ويمكن تقديم مراجع تفصيلية بأسماء العملاء
+        والاستشاريين حسب اتفاقيات السرية المتبعة.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="section-inner cta-inner">
+      <h2 class="cta-title">جاهزون لمناقشة مشروعكم القادم؟</h2>
+      <p class="cta-text">
+        سواء كنتم تبحثون عن واجهات ألومنيوم، نوافذ وأبواب، ستائر رول داخلية أو أنظمة شتر خارجية،
+        يمكن لفريق شركة الأنظمة المتقنة للصناعة خدمتكم من مرحلة التصميم وحتى التركيب
+        في الرياض وجدة والدمام.
+      </p>
+      <div class="cta-buttons">
+        <a href="contact-ar.html" class="btn-primary">طلب عرض سعر</a>
+        <a href="files/ESI-Company-Profile-AR.pdf" class="btn-secondary">تحميل بروفايل الشركة (PDF)</a>
       </div>
     </div>
   </section>
 
-  <!-- قسم تواصل مختصر -->
-  <section class="home-contact">
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
     <div class="section-inner">
       <h2 class="section-title">التواصل والفروع</h2>
       <p class="section-subtitle">
-        يمكنكم التواصل مع فريق الشركة لطلب عرض سعر أو استفسار فني عبر البيانات التالية أو
-        إرسال رسالة مختصرة من خلال النموذج.
+        للتواصل وطلب عروض الأسعار أو الدعم الفني يمكنكم استخدام بيانات الاتصال أدناه
+        أو تعبئة نموذج الطلب، وسيقوم فريقنا بالتواصل معكم في أقرب وقت ممكن.
       </p>
 
-      <div class="home-contact-grid">
+      <div class="contact-grid">
         <div class="contact-details">
           <p><strong>شركة الأنظمة المتقنة للصناعة</strong></p>
-          <p>Exquisite System Industry Co.</p>
+          <p>حلول الألمنيوم والتظليل للمباني الحديثة</p>
+
           <p style="margin-top:0.4rem;">
             البريد الإلكتروني:
             <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a><br>
-            الموقع الإلكتروني:
+            الموقع:
             <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
           </p>
+
           <p style="margin-top:0.4rem;">
             السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
           </p>
 
           <div class="branches">
             <div>
-              <strong>فرع الرياض (الرئيسي)</strong><br>
-              الرياض – المملكة العربية السعودية<br>
-              (يضاف العنوان الكامل ورقم التواصل هنا)
+              <strong>فرع الرياض</strong><br>
+              الفرع الرئيسي – الرياض.<br>
+              (يضاف العنوان الكامل وأرقام الاتصال هنا.)
             </div>
             <div>
               <strong>فرع جدة</strong><br>
-              جدة – المملكة العربية السعودية<br>
-              (يضاف العنوان وبيانات التواصل)
+              (يضاف العنوان ووسائل التواصل.)
             </div>
             <div>
               <strong>فرع الدمام</strong><br>
-              الدمام – المملكة العربية السعودية<br>
-              (يضاف العنوان وبيانات التواصل)
+              (يضاف العنوان ووسائل التواصل.)
             </div>
           </div>
         </div>
 
-        <form class="mini-form">
+        <form class="contact-form">
           <div class="form-row">
-            <label for="mini-name">الاسم</label>
-            <input id="mini-name" type="text" placeholder="الاسم الكريم">
+            <label for="name">الاسم</label>
+            <input id="name" type="text" placeholder="الاسم الكريم">
           </div>
           <div class="form-row">
-            <label for="mini-company">الجهة / الشركة</label>
-            <input id="mini-company" type="text" placeholder="مالك / مقاول / استشاري">
+            <label for="company">الجهة / المشروع</label>
+            <input id="company" type="text" placeholder="اسم الشركة أو المشروع">
           </div>
           <div class="form-row">
-            <label for="mini-phone">الجوال / الهاتف</label>
-            <input id="mini-phone" type="text" placeholder="+966...">
+            <label for="email">البريد الإلكتروني</label>
+            <input id="email" type="email" placeholder="name@example.com">
           </div>
           <div class="form-row">
-            <label for="mini-message">وصف مختصر للمطلوب</label>
-            <textarea id="mini-message" placeholder="مثال: نوافذ وأبواب ألمنيوم + ستائر رول لمشروع في الرياض."></textarea>
+            <label for="phone">الجوال / الهاتف</label>
+            <input id="phone" type="text" placeholder="+966...">
           </div>
-          <button type="submit" class="btn-primary">إرسال الطلب</button>
+          <div class="form-row">
+            <label for="message">نص الرسالة</label>
+            <textarea id="message" placeholder="وصف مختصر للمشروع أو المطلوب."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">إرسال الرسالة</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- الفوتر -->
+  <!-- Footer -->
   <footer>
     <div class="footer-inner">
       <div class="footer-col">
         <h3>شركة الأنظمة المتقنة للصناعة</h3>
         <p>
-          حلول ألمنيوم وتظليل وشتر للمباني السكنية والتجارية والصناعية في المملكة العربية السعودية.
+          أعمال الألمنيوم والستائر والرول وأنظمة الشتر للمباني السكنية والتجارية والصناعية
+          داخل المملكة العربية السعودية.
         </p>
         <p class="footer-meta">
           السجل التجاري: 1010778986 · الرقم الضريبي: 311417731400003
@@ -984,28 +1016,31 @@
       </div>
 
       <div class="footer-col">
-        <h4>بيانات التواصل</h4>
-        <p>البريد: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a></p>
+        <h4>التواصل</h4>
+        <p>البريد الإلكتروني: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a></p>
         <p>الرياض · جدة · الدمام</p>
-        <p class="footer-meta">أيام العمل: الأحد – الخميس، 9:00 ص – 5:00 م</p>
+        <p class="footer-meta">أوقات العمل: من الأحد إلى الخميس، 9 صباحاً – 5 مساءً</p>
+        <p class="footer-meta">
+          تحميل: <a href="files/ESI-Company-Profile-AR.pdf">بروفايل الشركة (PDF)</a>
+        </p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div>© <span id="year"></span> شركة الأنظمة المتقنة للصناعة – جميع الحقوق محفوظة.</div>
-      
+     
   </footer>
 
-  <!-- السنة + واتساب -->
+  <!-- Year + WhatsApp -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
   <a
-    href="https://wa.me/966553075340?text=مرحباً%20شركة%20الأنظمة%20المتقنة%20للصناعة%2C%20أرغب%20في%20الاستفسار%20عن%20خدماتكم."
+    href="https://wa.me/966553075340?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%20%D9%88%D8%AD%D9%84%D9%88%D9%84%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%A7%D9%84%D8%A3%D9%86%D8%B8%D9%85%D8%A9%20%D8%A7%D9%84%D9%85%D8%AA%D9%82%D9%86%D8%A9%20%D9%84%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D8%A9."
     class="whatsapp-float"
     target="_blank"
-    aria-label="الدردشة عبر واتساب"
+    aria-label="التواصل عبر واتساب"
   >✆</a>
 
 </body>
