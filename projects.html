@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | Exquisite System Industry Company</title>
+  <title>Projects | Exquisite System Industry Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="Contact Exquisite System Industry Company branches in Riyadh, Jeddah and Dammam for aluminum and shading solutions." />
+        content="Selected reference projects executed by Exquisite System Industry Company in Riyadh, Jeddah, Dammam and other cities." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -157,93 +157,53 @@
       max-width: 650px;
     }
 
-    .contact-grid {
+    .projects-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 1.5rem;
-      align-items: flex-start;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
     }
 
-    .contact-details {
-      font-size: 0.9rem;
-    }
-
-    .contact-details p { margin-bottom: 0.3rem; }
-
-    .branches {
-      margin-top: 0.8rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 0.8rem;
-      font-size: 0.85rem;
-    }
-
-    .branch-card {
-      background: var(--white);
-      padding: 0.8rem;
-      border-radius: 8px;
-      border: 1px dashed #e0c9b0;
-    }
-
-    .branch-name {
-      font-weight: 600;
-      color: var(--blue);
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-form {
+    .project-card {
       background: var(--white);
       border-radius: var(--radius);
       padding: 1rem;
-      border: 1px solid #f0ded0;
+      border: 1px solid #e4e4e4;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
       font-size: 0.9rem;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
     }
 
-    .form-row { margin-bottom: 0.6rem; }
-
-    .form-row label {
-      display: block;
-      font-size: 0.8rem;
-      margin-bottom: 0.2rem;
-      color: #666;
-    }
-
-    .form-row input,
-    .form-row textarea {
-      width: 100%;
-      padding: 0.45rem 0.6rem;
-      border-radius: 6px;
-      border: 1px solid #d4d4d4;
-      font: inherit;
-    }
-
-    .form-row textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .btn-primary {
-      background: var(--orange);
-      color: var(--white);
-      padding: 0.55rem 1.3rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      transition: background 0.2s ease, transform 0.15s ease,
-        box-shadow 0.15s ease;
-      box-shadow: 0 8px 18px rgba(242, 106, 33, 0.3);
-    }
-
-    .btn-primary:hover {
-      background: #e25f1c;
+    .project-card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(242, 106, 33, 0.35);
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--blue);
+      background: rgba(31, 78, 121, 0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--dark);
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: #777;
+      margin-bottom: 0.4rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 1.4rem;
     }
 
     footer {
@@ -262,10 +222,6 @@
       gap: 0.5rem;
       justify-content: space-between;
       align-items: center;
-    }
-
-    @media (max-width: 860px) {
-      .contact-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
@@ -310,89 +266,87 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="products.html" class="nav-link">Products</a></li>
-          <li><a href="projects.html" class="nav-link">Projects</a></li>
-          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="lang-switch">
-        <a href="contact.html" class="active">EN</a>
-        <a href="contact-ar.html">AR</a>
+        <a href="projects.html" class="active">EN</a>
+        <a href="projects-ar.html">AR</a>
       </div>
     </div>
   </header>
 
   <main>
     <div class="page-inner">
-      <h1 class="page-title">Contact & Branches</h1>
+      <h1 class="page-title">Selected Projects</h1>
       <p class="page-subtitle">
-        For inquiries, quotations or technical support, please contact our branches
-        using the details below or send us a message through the contact form.
+        The below examples show typical projects in which Exquisite System Industry
+        Co. supplies and installs aluminum systems, roller blinds and shutter
+        solutions. You can later replace the sample descriptions with real project
+        names, locations and photos.
       </p>
 
-      <div class="contact-grid">
-        <section class="contact-details">
-          <p><strong>Exquisite System Industry Company</strong></p>
-          <p>شركة الأنظمة المتقنة للصناعة</p>
-          <p style="margin-top:0.4rem;">
-            C.R.: 1010778986 · VAT: 311417731400003
+      <section class="projects-grid">
+        <article class="project-card">
+          <span class="project-tag">Commercial Building</span>
+          <div class="project-title">Office Tower – Riyadh</div>
+          <div class="project-meta">
+            Scope: Aluminum windows, curtain wall façade and external shading.
+          </div>
+          <p>
+            Supply and installation of aluminum windows and curtain wall system for
+            a mid-rise office tower, including shop drawings, fabrication and
+            on-site installation.
           </p>
-          <p style="margin-top:0.4rem;">
-            Email: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a><br>
-            Website: <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
+        </article>
+
+        <article class="project-card">
+          <span class="project-tag">Residential Compound</span>
+          <div class="project-title">Gated Community – Jeddah</div>
+          <div class="project-meta">
+            Scope: Aluminum doors & windows, roller blinds and shutters.
+          </div>
+          <p>
+            Complete package for villas and apartments including aluminum doors and
+            windows, interior roller blinds and external shutters for select
+            openings.
           </p>
+        </article>
 
-          <div class="branches">
-            <div class="branch-card">
-              <div class="branch-name">Riyadh Branch</div>
-              <div>Main branch – Riyadh</div>
-              <div>(Add full address here)</div>
-              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
-            </div>
-            <div class="branch-card">
-              <div class="branch-name">Jeddah Branch</div>
-              <div>(Add address here)</div>
-              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
-            </div>
-            <div class="branch-card">
-              <div class="branch-name">Dammam Branch</div>
-              <div>(Add address here)</div>
-              <div style="margin-top:0.3rem;">Phone: (Add number)</div>
-            </div>
+        <article class="project-card">
+          <span class="project-tag">Industrial Facility</span>
+          <div class="project-title">Warehouse & Loading Bays – Dammam</div>
+          <div class="project-meta">
+            Scope: Industrial shutters and special aluminum works.
           </div>
-
-          <p style="font-size:0.85rem; color:#777; margin-top:1rem;">
-            You can also include WhatsApp numbers or Google Maps links for each
-            branch to help customers reach your locations more easily.
+          <p>
+            Heavy-duty shutter systems for loading bays and access doors, with motor
+            operation and safety sensors, plus custom aluminum louvers and vents.
           </p>
-        </section>
+        </article>
 
-        <form class="contact-form">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name">
+        <article class="project-card">
+          <span class="project-tag">Retail & Showrooms</span>
+          <div class="project-title">Retail Strip – Riyadh</div>
+          <div class="project-meta">
+            Scope: Shopfront aluminum, glass and shutters.
           </div>
-          <div class="form-row">
-            <label for="company">Company / Project</label>
-            <input id="company" type="text" placeholder="Company / Project name">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="name@example.com">
-          </div>
-          <div class="form-row">
-            <label for="phone">Phone / Mobile</label>
-            <input id="phone" type="text" placeholder="+966...">
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Describe your project or request a quotation."></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Send message</button>
-        </form>
-      </div>
+          <p>
+            Aluminum and glass shopfronts combined with roller shutters for
+            security, installed in coordination with tenants and main contractor.
+          </p>
+        </article>
+      </section>
+
+      <p class="note">
+        More detailed references with project names, consultants and contractors
+        can be provided upon request, depending on confidentiality agreements.
+        You can also add project photos and maps to this page in the future.
+      </p>
     </div>
-  </main> 
+  </main>
 
   <footer>
     <div class="footer-inner">
