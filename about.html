@@ -2,258 +2,568 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>About Us | Exquisite System Industry Co.</title>
+  <title>About | Exquisite System Industry Co.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
-        content="About Exquisite System Industry Company (ESI) – engineered aluminum systems, shading solutions and shutter systems for residential, commercial and industrial projects across Saudi Arabia." />
+        content="Learn more about Exquisite System Industry Company – a Saudi industrial company specialized in aluminum works, façades, roller blinds and shutter systems for projects across Saudi Arabia." />
+
   <link rel="canonical" href="https://kasemsaied.github.io/exquisite-system/about.html" />
 
   <style>
-    :root{
-      --blue:#1f4e79;
-      --orange:#f26a21;
-      --dark:#333333;
-      --light:#f6f6f6;
-      --white:#ffffff;
-      --max-width:1100px;
-      --radius:10px;
+    :root {
+      --blue: #1f4e79;
+      --orange: #f26a21;
+      --dark: #333333;
+      --light: #f6f6f6;
+      --white: #ffffff;
+      --max-width: 1100px;
+      --radius: 10px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:#fafafa;color:var(--dark);line-height:1.7;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
     /* Top bar */
-    .top-bar{background:var(--orange);color:var(--white);font-size:.9rem}
-    .top-bar-inner{
-      max-width:var(--max-width);margin:0 auto;padding:.3rem 1rem;
-      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem
-    }
-    .top-bar-inner div{display:flex;flex-wrap:wrap;gap:.3rem}
-    .top-bar-inner a{color:var(--white);text-decoration:underline;text-decoration-thickness:1px}
-
-    /* Header */
-    header{
-      background:var(--blue);color:var(--white);
-      position:sticky;top:0;z-index:999;
-      box-shadow:0 4px 10px rgba(0,0,0,.12)
-    }
-    .nav{
-      max-width:var(--max-width);margin:0 auto;padding:.6rem 1rem;
-      display:flex;align-items:center;justify-content:space-between;gap:1rem
-    }
-    .logo-area{display:flex;align-items:center;gap:.6rem}
-    .logo-img{
-      width:60px;height:60px;border-radius:50%;background:var(--white);
-      display:flex;align-items:center;justify-content:center;overflow:hidden;
-      box-shadow:0 0 0 2px rgba(255,255,255,.4)
-    }
-    .logo-img img{width:92%;height:92%;object-fit:contain}
-    .logo-text-english-main{font-weight:700;font-size:.9rem;line-height:1.2}
-    .logo-text-arabic{font-size:.85rem;opacity:.95}
-
-    nav ul{list-style:none;display:flex;gap:1rem;flex-wrap:wrap;font-size:.95rem}
-    nav a{position:relative;padding-bottom:.2rem;font-weight:500;opacity:.9;transition:opacity .2s ease}
-    nav a::after{
-      content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--orange);
-      transition:width .25s ease
-    }
-    nav a:hover{opacity:1}
-    nav a:hover::after{width:100%}
-    .nav-link.active{opacity:1}
-    .nav-link.active::after{width:100%}
-
-    .lang-switch{display:flex;gap:.4rem;font-size:.85rem}
-    .lang-switch a{padding:.15rem .5rem;border-radius:999px;border:1px solid rgba(255,255,255,.5)}
-    .lang-switch .active{background:var(--orange);border-color:var(--orange)}
-
-    /* Page header / hero */
-    .page-hero{
-      background:linear-gradient(135deg,#ffffff 0%,#f1f4f8 45%,#e9f0f7 100%);
-      border-bottom:3px solid var(--orange);
-      padding:2.2rem 1rem 2rem;
-    }
-    .page-hero-inner{
-      max-width:var(--max-width);margin:0 auto;
-      display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1.1fr);
-      gap:1.6rem;align-items:center;
-    }
-    .kicker{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#777;margin-bottom:.4rem}
-    h1{font-size:2rem;color:var(--blue);margin-bottom:.6rem}
-    .lead{color:#444;font-size:1rem;max-width:680px}
-    .hero-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;font-size:.8rem}
-    .badge{
-      background:rgba(242,106,33,.08);color:var(--orange);
-      padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(242,106,33,.4)
-    }
-    .hero-card{
-      background:#fff;border-radius:16px;padding:1.1rem 1.1rem;
-      border:1px solid #e4e4e4;box-shadow:0 8px 24px rgba(0,0,0,.06);
-      border-top:4px solid var(--orange);
-      font-size:.9rem;
-    }
-    .hero-card h2{font-size:1rem;color:var(--blue);margin-bottom:.4rem}
-    .mini-list{padding-left:1.1rem}
-    .mini-list li{margin-bottom:.25rem}
-
-    .hero-image{
-      margin-top:.8rem;
-      border-radius:14px;overflow:hidden;border:1px solid #e4e4e4;
-    }
-    .hero-image img{width:100%;height:260px;object-fit:cover}
-    .img-caption{
-      font-size:.78rem;color:#777;padding:.55rem .7rem;background:#fff;border-top:1px solid #eee;
+    .top-bar {
+      background: var(--orange);
+      color: var(--white);
+      font-size: 0.9rem;
     }
 
-    /* Sections */
-    main{padding:2.2rem 1rem}
-    .section-inner{max-width:var(--max-width);margin:0 auto}
-    section{margin-bottom:2.2rem}
-    .section-title{
-      font-size:1.4rem;font-weight:700;color:var(--blue);
-      margin-bottom:.6rem;position:relative;display:inline-block
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    .section-title::after{
-      content:"";position:absolute;left:0;bottom:-.2rem;width:50%;height:3px;
-      background:var(--orange);border-radius:999px
-    }
-    .section-subtitle{font-size:.95rem;color:#666;margin-bottom:1.1rem;max-width:820px}
 
-    .two-col{
-      display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.2fr);
-      gap:1.3rem;align-items:start
+    /* Header / Navigation */
+    header {
+      background: var(--blue);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     }
-    .box{
-      background:#fff;border-radius:14px;border:1px solid #e4e4e4;
-      padding:1rem 1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.03);
-      font-size:.92rem
-    }
-    .box h3{font-size:1rem;color:var(--blue);margin-bottom:.35rem}
-    .box p{margin-bottom:.5rem;color:#444}
-    .box ul{padding-left:1.1rem}
-    .box li{margin-bottom:.28rem}
 
-    .note{
-      background:#fdf3eb;border-radius:14px;border:1px solid #f3d2b5;
-      padding:.9rem 1rem;font-size:.86rem
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
-    .note strong{color:var(--blue)}
-    .muted{color:#777;font-size:.86rem}
 
-    /* Capability cards */
-    .cards-grid{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:1rem
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
-    .card{
-      background:#fff;border-radius:14px;border:1px solid #e4e4e4;
-      padding:1rem 1.05rem;box-shadow:0 4px 14px rgba(0,0,0,.03);
-      font-size:.9rem
-    }
-    .card-tag{
-      display:inline-block;font-size:.75rem;color:var(--blue);
-      background:rgba(31,78,121,.08);padding:.15rem .6rem;border-radius:999px;margin-bottom:.45rem
-    }
-    .card-title{font-weight:600;margin-bottom:.3rem}
-    .card ul{padding-left:1.1rem}
-    .card li{margin-bottom:.22rem}
 
-    /* Image row */
-    .image-row{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:1rem;
+    .logo-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
     }
-    .img-card{
-      border-radius:14px;overflow:hidden;border:1px solid #e4e4e4;background:#fff;
-      box-shadow:0 4px 14px rgba(0,0,0,.03)
-    }
-    .img-card img{width:100%;height:210px;object-fit:cover}
-    .img-card .cap{padding:.7rem .8rem;font-size:.88rem;color:#555}
 
-    /* CTA band */
-    .cta-band{
-      background:linear-gradient(135deg,#fdf3eb 0%,#ffe4d1 45%,#f9f1ea 100%);
-      border-top:1px solid #f3d2b5;border-bottom:1px solid #f3d2b5;
-      padding:1.8rem 1rem;margin-top:1.2rem
+    .logo-img img {
+      width: 92%;
+      height: 92%;
+      object-fit: contain;
     }
-    .cta-inner{
-      max-width:var(--max-width);margin:0 auto;
-      display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem
+
+    .logo-text-english-main {
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1.2;
     }
-    .cta-title{font-size:1.2rem;color:var(--blue);margin-bottom:.3rem}
-    .cta-text{font-size:.92rem;color:#555;max-width:650px}
-    .cta-buttons{display:flex;flex-wrap:wrap;gap:.7rem}
-    .btn-primary{
-      background:var(--orange);color:#fff;padding:.55rem 1.3rem;border-radius:999px;
-      font-weight:600;font-size:.95rem;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem
+
+    .logo-text-arabic {
+      font-size: 0.8rem;
+      opacity: 0.9;
     }
-    .btn-secondary{
-      background:transparent;color:var(--blue);padding:.55rem 1.3rem;border-radius:999px;
-      font-weight:500;font-size:.95rem;border:1px solid var(--blue);cursor:pointer;display:inline-flex;align-items:center;gap:.4rem
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 0.2rem;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange);
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      opacity: 1;
+    }
+
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .lang-switch a {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .lang-switch .active {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    /* Page layout */
+    main {
+      padding: 2.5rem 1rem 2.5rem;
+    }
+
+    .page-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+
+    .page-subtitle {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+      max-width: 760px;
+    }
+
+    /* Two-column intro */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 1.7rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .about-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.3rem;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      font-size: 0.95rem;
+    }
+
+    .about-highlight {
+      background: #fdf3eb;
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid #f3d2b5;
+      font-size: 0.9rem;
+    }
+
+    .about-highlight strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      color: var(--blue);
+    }
+
+    /* Vision & mission */
+    .section-block {
+      margin-bottom: 2.2rem;
+    }
+
+    .section-heading {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 0.6rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .pill-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      font-size: 0.9rem;
+    }
+
+    .pill-title {
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Why choose us */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.1rem;
+      border: 1px solid #e4e4e4;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      color: var(--blue);
+      background: rgba(31, 78, 121, 0.08);
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--dark);
+    }
+
+    .card-list {
+      margin-top: 0.4rem;
+      padding-left: 1.1rem;
+    }
+
+    .card-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* Process / steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-top: 0.6rem;
+    }
+
+    .step-card {
+      background: #f6f6f6;
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      border: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+    }
+
+    .step-number {
+      display: inline-block;
+      min-width: 26px;
+      text-align: center;
+      background: var(--orange);
+      color: #fff;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      padding: 0.1rem 0.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      color: var(--blue);
+    }
+
+    /* CTA band small */
+    .cta-band {
+      background: linear-gradient(135deg, #fdf3eb 0%, #ffe4d1 45%, #f9f1ea 100%);
+      border-top: 1px solid #f3d2b5;
+      border-bottom: 1px solid #f3d2b5;
+      padding: 2rem 1rem;
+      margin-top: 1.3rem;
+    }
+
+    .cta-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cta-text-main {
+      max-width: 620px;
+    }
+
+    .cta-title {
+      font-size: 1.3rem;
+      color: var(--blue);
+      margin-bottom: 0.4rem;
+    }
+
+    .cta-text {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    /* Buttons + hover */
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--blue);
+      padding: 0.55rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid var(--blue);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     }
 
     /* Footer */
-    footer{
-      background:var(--orange);color:#fff;padding:1.6rem 1rem 1.2rem;font-size:.85rem
+    footer {
+      background: var(--orange);
+      color: #ffffff;
+      padding: 1.6rem 1rem 1.2rem;
+      font-size: 0.85rem;
+      margin-top: 2.2rem;
     }
-    .footer-inner{
-      max-width:var(--max-width);margin:0 auto;
-      display:grid;grid-template-columns:2.1fr 1.2fr 1.4fr;gap:1.3rem
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2.1fr 1.2fr 1.4fr;
+      gap: 1.3rem;
     }
-    .footer-col h3,.footer-col h4{margin-bottom:.4rem;font-weight:700}
-    .footer-col p{margin-bottom:.3rem}
-    .footer-meta{opacity:.9;font-size:.8rem}
-    .footer-col ul{list-style:none;padding:0;margin:0}
-    .footer-col li{margin-bottom:.25rem}
-    .footer-col a{color:#fff}
-    .footer-col a:hover{text-decoration:underline}
-    .footer-bottom{
-      max-width:var(--max-width);margin:.8rem auto 0;padding-top:.6rem;
-      border-top:1px solid rgba(255,255,255,.4);
-      display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem
+
+    .footer-col h3,
+    .footer-col h4 {
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+    }
+
+    .footer-col p {
+      margin-bottom: 0.3rem;
+    }
+
+    .footer-meta {
+      opacity: 0.9;
+      font-size: 0.8rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.25rem;
+    }
+
+    .footer-col a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0.8rem auto 0;
+      padding-top: 0.6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    /* WhatsApp button */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 1.7rem;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
     }
 
     /* Responsive */
-    @media (max-width: 900px){
-      .page-hero-inner{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
+    @media (max-width: 860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-    @media (max-width: 800px){
-      .footer-inner{grid-template-columns:1fr}
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
     }
-    @media (max-width: 640px){
-      .nav{flex-direction:column;align-items:flex-start}
-      nav ul{width:100%;justify-content:flex-start;flex-wrap:wrap}
-      .top-bar-inner{flex-direction:column;align-items:flex-start}
+
+    @media (max-width: 800px) {
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- Top contact bar -->
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="top-bar-inner">
+      <div>Aluminum Work · Curtains · Roller Blinds · Shutter Systems</div>
       <div>
-        <span>Aluminum systems</span> ·
-        <span>Glass façades</span> ·
-        <span>Curtains & roller blinds</span> ·
-        <span>Shutter systems</span>
-      </div>
-      <div>
-        <span>Email:</span>
+        Email:
         <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a> ·
-        <span>Website:</span>
+        Website:
         <a href="https://www.exquisitesystem.com" target="_blank">www.Exquisitesystem.com</a>
       </div>
     </div>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header>
     <div class="nav">
       <div class="logo-area">
@@ -283,292 +593,187 @@
     </div>
   </header>
 
-  <!-- Page hero -->
-  <section class="page-hero">
-    <div class="page-hero-inner">
-      <div>
-        <div class="kicker">ABOUT ESI • ENGINEERING-READY DELIVERY</div>
-        <h1>Built for consultants & contractors</h1>
-        <p class="lead">
-          Exquisite System Industry Company (ESI) is a Saudi industrial company focused on engineered
-          aluminum systems, shading solutions (curtains & roller blinds) and shutter systems. We support
-          project teams with clear scope definition, technical submittals and coordinated site execution.
-        </p>
+  <main>
+    <div class="page-inner">
+      <h1 class="page-title">About Exquisite System Industry Company</h1>
+      <p class="page-subtitle">
+        Exquisite System Industry Co. is a Saudi industrial company specialized in aluminum works,
+        glass façades, interior shading and shutter systems. We support projects from early design
+        and shop drawings to fabrication, delivery and on-site installation.
+      </p>
 
-        <div class="hero-badges">
-          <span class="badge">Riyadh · Jeddah · Dammam</span>
-          <span class="badge">Shop drawings & approvals</span>
-          <span class="badge">Supply & installation</span>
+      <!-- Intro grid -->
+      <div class="about-grid">
+        <div class="about-card">
+          <p>
+            Our role is to connect project specifications with practical execution. We review drawings
+            and requirements with consultants and contractors, select suitable aluminum systems and
+            materials, and then manufacture and install according to approved details and timelines.
+          </p>
+          <p style="margin-top:0.7rem;">
+            From residential villas and apartment buildings to commercial centers, offices and industrial
+            facilities, we provide solutions that balance aesthetics, performance and cost-efficiency.
+          </p>
+        </div>
+
+        <div class="about-highlight">
+          <strong>What we focus on</strong>
+          <p>
+            Clear coordination, reliable delivery and consistent technical quality. We believe that aluminum
+            and shading works should not be a bottleneck in the project schedule, but a package that is
+            planned, executed and handed over smoothly.
+          </p>
         </div>
       </div>
 
-      <aside class="hero-card">
-        <h2>Company facts (to be updated)</h2>
-        <ul class="mini-list">
-          <li><strong>Legal name:</strong> Exquisite System Industry Company (ESI)</li>
-          <li><strong>C.R.:</strong> 1010778986</li>
-          <li><strong>VAT:</strong> 311417731400003</li>
-          <li><strong>Established:</strong> To be updated</li>
-          <li><strong>Legal form:</strong> To be updated</li>
-          <li><strong>Commercial license & memberships:</strong> To be updated</li>
-        </ul>
-
-        <div class="hero-image">
-          <img src="images/workshop.jpg" alt="ESI workshop and fabrication capability (placeholder)">
-          <div class="img-caption">Placeholder image — replace with real workshop / fabrication photo.</div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <main>
-    <div class="section-inner">
-
-      <!-- Company overview -->
-      <section>
-        <h2 class="section-title">Company overview</h2>
-        <p class="section-subtitle">
-          This page translates the key company information into a website-friendly structure:
-          legal/administrative basics, commercial activities, target markets, geographic coverage,
-          competitive edge, and operational/logistical readiness. 
-        </p>
-
-        <div class="two-col">
-          <div class="box">
-            <h3>What we do</h3>
+      <!-- Vision & mission -->
+      <div class="section-block">
+        <h2 class="section-heading">Vision & Mission</h2>
+        <div class="two-column">
+          <div class="pill-card">
+            <div class="pill-title">Our Vision</div>
             <p>
-              ESI delivers aluminum and shading scopes for residential, commercial and industrial projects.
-              Our core activities include:
-            </p>
-            <ul>
-              <li>Aluminum windows, doors, shopfronts and façades.</li>
-              <li>Curtains, roller blinds and interior shading solutions.</li>
-              <li>Manual and motorized shutter systems (security & light control).</li>
-              <li>Turn-key supply & installation, aligned with project schedule.</li>
-            </ul>
-            <p class="muted">
-              (The above aligns with the “commercial activity & main products/services” structure required in the company information checklist.) :contentReference[oaicite:4]{index=4}
+              To be a trusted industrial partner in aluminum and shading systems for building projects
+              across Saudi Arabia, recognized for reliability, technical clarity and professional execution.
             </p>
           </div>
 
-          <div class="note">
-            <strong>For consultants & contractors:</strong>
-            <p style="margin-top:.35rem;">
-              We can provide clear technical and commercial breakdowns, and support approvals through
-              shop drawings, samples, and technical submittals — helping project teams reduce coordination
-              risk and keep installation on-track.
+          <div class="pill-card">
+            <div class="pill-title">Our Mission</div>
+            <p>
+              To provide practical, durable and well-engineered aluminum, roller blind and shutter solutions
+              that help consultants, contractors and owners deliver successful buildings on time and within budget.
             </p>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Capabilities -->
-      <section>
-        <h2 class="section-title">Capabilities</h2>
-        <p class="section-subtitle">
-          Our capabilities are structured to match engineering and site workflows — from technical submittals
-          to installation and hand-over.
-        </p>
-
+      <!-- Why choose us -->
+      <div class="section-block">
+        <h2 class="section-heading">Why contractors and owners choose us</h2>
         <div class="cards-grid">
           <article class="card">
-            <span class="card-tag">Engineering support</span>
-            <div class="card-title">Submittals & shop drawings</div>
-            <ul>
-              <li>Scope clarification and technical proposals.</li>
-              <li>Shop drawings for aluminum and shutters.</li>
-              <li>Samples and data sheets for approvals.</li>
+            <span class="card-tag">Technical coordination</span>
+            <div class="card-title">Support for consultants & contractors</div>
+            <p>
+              We review drawings, propose profile and glass options, and clarify details early to avoid
+              surprises during execution.
+            </p>
+            <ul class="card-list">
+              <li>Shop drawings and section details</li>
+              <li>Profile and accessory selection</li>
+              <li>Alignment with project specifications</li>
             </ul>
           </article>
 
           <article class="card">
-            <span class="card-tag">Fabrication readiness</span>
-            <div class="card-title">Workshop & equipment (to be updated)</div>
-            <ul>
-              <li>Machinery and production tooling: To be updated.</li>
-              <li>Operational capacity: To be updated.</li>
-              <li>Quality systems / certifications (ISO etc.): To be updated.</li>
+            <span class="card-tag">Industrial capability</span>
+            <div class="card-title">Fabrication and installation teams</div>
+            <p>
+              Our fabrication and site teams work together, keeping communication open so that what is
+              approved on paper is delivered at site.
+            </p>
+            <ul class="card-list">
+              <li>Aluminum and shutter fabrication</li>
+              <li>Skilled installation teams</li>
+              <li>Supervision and site follow-up</li>
             </ul>
-            <div class="muted">
-              These items align with “infrastructure, capacities, equipment, quality systems”. :contentReference[oaicite:5]{index=5}
-            </div>
           </article>
 
           <article class="card">
-            <span class="card-tag">Installation</span>
-            <div class="card-title">Coordinated site execution</div>
-            <ul>
-              <li>Site survey and measurements.</li>
-              <li>Phased delivery aligned with readiness.</li>
-              <li>Installation, snag closure and hand-over.</li>
+            <span class="card-tag">Coverage</span>
+            <div class="card-title">Riyadh, Jeddah and Dammam</div>
+            <p>
+              With presence in key regions, we can handle projects in different cities and coordinate
+              with project stakeholders locally.
+            </p>
+            <ul class="card-list">
+              <li>New projects and renovations</li>
+              <li>Residential, commercial and industrial</li>
+              <li>Small to mid-size developments</li>
             </ul>
           </article>
 
           <article class="card">
             <span class="card-tag">After-sales</span>
-            <div class="card-title">Warranty & maintenance (to be updated)</div>
-            <ul>
-              <li>Warranty policy: To be updated.</li>
-              <li>Maintenance/after-sales process: To be updated.</li>
-              <li>Spare parts & service response: To be updated.</li>
-            </ul>
-            <div class="muted">
-              These items align with “logistics/operations” and after-sales requirements. :contentReference[oaicite:6]{index=6}
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Markets & coverage -->
-      <section>
-        <h2 class="section-title">Target markets & coverage</h2>
-        <p class="section-subtitle">
-          We serve B2B, B2C and B2G demand through tailored scopes and documentation levels,
-          and we operate across key regions in Saudi Arabia. :contentReference[oaicite:7]{index=7}
-        </p>
-
-        <div class="two-col">
-          <div class="box">
-            <h3>Who we work with</h3>
-            <ul>
-              <li>Engineering consultants and design offices.</li>
-              <li>Main contractors and project managers.</li>
-              <li>Developers and building owners.</li>
-              <li>Government and semi-government entities (as applicable).</li>
-            </ul>
-            <p class="muted">
-              (Matches the “target sectors: B2B / B2C / B2G” structure.) :contentReference[oaicite:8]{index=8}
-            </p>
-          </div>
-
-          <div class="box">
-            <h3>Geographic coverage</h3>
-            <ul>
-              <li>Riyadh — Central Region</li>
-              <li>Jeddah — Western Region</li>
-              <li>Dammam — Eastern Region</li>
-              <li>Other cities: available upon project review</li>
-            </ul>
-            <p class="muted">
-              Branch count and detailed addresses can be added when ready. :contentReference[oaicite:9]{index=9}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Competitive edge -->
-      <section>
-        <h2 class="section-title">Why ESI</h2>
-        <p class="section-subtitle">
-          A strong “competitive edge” is essential for contractor/consultant trust:
-          coordinated scopes, clear documentation and dependable execution. :contentReference[oaicite:10]{index=10}
-        </p>
-
-        <div class="cards-grid">
-          <article class="card">
-            <span class="card-tag">Single-package delivery</span>
-            <div class="card-title">One coordinated scope</div>
+            <div class="card-title">Service and support</div>
             <p>
-              Aluminum systems, shading and shutters can be delivered as one package,
-              reducing coordination between multiple suppliers.
+              We understand that roller blinds and shutters are moving systems. We support our clients
+              with adjustments and maintenance when needed.
             </p>
-          </article>
-
-          <article class="card">
-            <span class="card-tag">Engineering-ready</span>
-            <div class="card-title">Documentation that supports approvals</div>
-            <p>
-              Submittals, shop drawings, samples and clear scope breakdowns help speed up
-              approvals and site readiness.
-            </p>
-          </article>
-
-          <article class="card">
-            <span class="card-tag">Phased execution</span>
-            <div class="card-title">Aligned with project schedule</div>
-            <p>
-              Delivery and installation are planned in phases to support realistic sequencing
-              and minimize site disruption.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- Visual proof (placeholders) -->
-      <section>
-        <h2 class="section-title">Proof of capability (placeholders)</h2>
-        <p class="section-subtitle">
-          Replace these placeholder images with real ESI workshop, fabrication and installation photos
-          to strengthen consultant and contractor confidence.
-        </p>
-
-        <div class="image-row">
-          <div class="img-card">
-            <img src="images/aluminum-windows.jpg" alt="Aluminum windows and doors (placeholder)">
-            <div class="cap"><strong>Aluminum systems:</strong> windows, doors and shopfronts.</div>
-          </div>
-          <div class="img-card">
-            <img src="images/curtain-wall.jpg" alt="Curtain wall façade system (placeholder)">
-            <div class="cap"><strong>Façades:</strong> curtain wall and glazed elevations.</div>
-          </div>
-          <div class="img-card">
-            <img src="images/installation.jpg" alt="On-site installation work (placeholder)">
-            <div class="cap"><strong>Execution:</strong> site installation and hand-over readiness.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Documents / compliance -->
-      <section>
-        <h2 class="section-title">Documents & compliance</h2>
-        <p class="section-subtitle">
-          Typical documents requested for contractor registration, prequalification, or agency discussions
-          include commercial registration, VAT certificate, quality certifications, company profile and visual identity. :contentReference[oaicite:11]{index=11}
-        </p>
-
-        <div class="two-col">
-          <div class="box">
-            <h3>Commonly requested documents</h3>
-            <ul>
-              <li>Commercial registration copy (C.R.).</li>
-              <li>VAT certificate.</li>
-              <li>Quality certificates and accreditations (if any).</li>
-              <li>Company profile (brochure).</li>
-              <li>Visual identity (logo, colors, fonts).</li>
-              <li>Key client list (may be anonymized).</li>
+            <ul class="card-list">
+              <li>Inspection and fine adjustments</li>
+              <li>Motor and control checks</li>
+              <li>Replacement of worn components</li>
             </ul>
-            <p class="muted">This list follows the “required documents” section in the checklist. :contentReference[oaicite:12]{index=12}</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Process / how we work -->
+      <div class="section-block">
+        <h2 class="section-heading">How we work with your project</h2>
+        <p style="font-size:0.9rem;color:#555;margin-bottom:0.4rem;">
+          Our typical workflow ensures that aluminum and shading works follow a clear and predictable path:
+        </p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title">Initial inquiry</div>
+            <p>
+              We receive drawings, BOQ or a simple description of the required aluminum, blinds or shutters.
+            </p>
           </div>
 
-          <div class="note">
-            <strong>Agency & partnership readiness:</strong>
-            <p style="margin-top:.35rem;">
-              If you plan to represent international manufacturers, this section can expand to cover:
-              reasons for agency interest, expansion plans, dedicated resources, and prior agency experience. :contentReference[oaicite:13]{index=13}
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title">Site visit & measurements</div>
+            <p>
+              When needed, we visit the site to confirm dimensions, conditions and installation constraints.
             </p>
-            <p class="muted" style="margin-top:.4rem;">
-              (We can add a separate “Partnerships” page later if you want.)
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title">Proposal & shop drawings</div>
+            <p>
+              We prepare a technical and commercial offer, and issue shop drawings for review and approval.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title">Fabrication & installation</div>
+            <p>
+              After approval, we proceed with fabrication, delivery and installation according to the agreed schedule.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title">Testing & handover</div>
+            <p>
+              Systems are checked, adjusted and handed over, with guidance on operation and basic maintenance.
             </p>
           </div>
         </div>
-      </section>
-
+      </div>
     </div>
   </main>
 
-  <!-- CTA -->
+  <!-- CTA band -->
   <section class="cta-band">
     <div class="cta-inner">
-      <div>
-        <div class="cta-title">Need an engineered scope and clear documentation?</div>
-        <div class="cta-text">
-          Send your drawings or BOQ and we’ll prepare a structured technical and commercial proposal
-          covering aluminum systems, shading and shutters as required.
-        </div>
+      <div class="cta-text-main">
+        <h2 class="cta-title">Share your drawings or project requirements with us</h2>
+        <p class="cta-text">
+          You can send project drawings, BOQ or even a simple sketch, and our team will propose suitable
+          aluminum, roller blind and shutter solutions together with a clear commercial offer.
+        </p>
       </div>
       <div class="cta-buttons">
-        <a href="contact.html" class="btn-primary">Contact us</a>
-        <a href="mailto:perfectsystemeo@gmail.com" class="btn-secondary">Email drawings / BOQ</a>
+        <a href="contact.html" class="btn-primary">Contact our team</a>
+        <a href="files/ESI-Company-Profile-EN.pdf" class="btn-secondary">Download company profile</a>
       </div>
     </div>
   </section>
@@ -579,8 +784,8 @@
       <div class="footer-col">
         <h3>Exquisite System Industry Co.</h3>
         <p>
-          Engineered aluminum, shading and shutter solutions for residential,
-          commercial and industrial projects across the Kingdom of Saudi Arabia.
+          Industrial aluminum, curtains, roller blinds and shutter systems for modern buildings
+          in Saudi Arabia.
         </p>
         <p class="footer-meta">
           C.R.: 1010778986 · VAT: 311417731400003
@@ -588,37 +793,43 @@
       </div>
 
       <div class="footer-col">
-        <h4>Quick links</h4>
+        <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About the Company</a></li>
+          <li><a href="products.html">Products & Solutions</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact & Branches</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Contact details</h4>
+        <h4>Contact</h4>
         <p>Email: <a href="mailto:perfectsystemeo@gmail.com">perfectsystemeo@gmail.com</a></p>
         <p>Riyadh · Jeddah · Dammam</p>
-        <p class="footer-meta">Working days: Sunday – Thursday, 9:00 am – 5:00 pm</p>
+        <p class="footer-meta">Working hours: Sun–Thu, 9:00 am – 5:00 pm</p>
         <p class="footer-meta">
-          Profile: <a href="files/ESI-Company-Profile-EN.pdf">Company profile (PDF)</a>
-          <span class="muted">(upload later)</span>
+          Download: <a href="files/ESI-Company-Profile-EN.pdf">Company Profile (PDF)</a>
         </p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div>© <span id="year"></span> Exquisite System Industry Company – All rights reserved.</div>
-      <div>Designed to match official company letterhead identity.</div>
-    </div>
+     
   </footer>
 
+  <!-- Year + WhatsApp -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <a
+    href="https://wa.me/966553075340?text=Hello%20Exquisite%20System%20Industry%20Co.%20I%20would%20like%20to%20ask%20about%20your%20products."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp"
+  >✆</a>
 
 </body>
 </html>
